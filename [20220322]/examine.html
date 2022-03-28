@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    :root {
+    --height-1:800px;
+    }
+
+
+
+    .position-absolute {
+      position:absolute;
+    }
+    
+    #root {
+      width:100vw;
+      height:var(--height-1);
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      border:1px solid red;
+      background-color:black;
+    }
+
+    #wrapper {
+      width:400px;
+      height:var(--height-1);
+    }
+
+    nav {
+      width:200px;
+      height:var(--height-1);
+      background-color:#ABE6F5;
+      z-index:1;
+    }
+
+    main {
+      width:400px;
+      height:var(--height-1);
+      background-color: #c4c4c4;
+      z-index:0;
+    }
+
+
+
+
+  </style>  
+</head>
+<body>
+  <div id="root">
+    <div id="wrapper">
+      <nav class="position-absolute"></nav>
+      <main class="position-absolute"></main>
+    </div>
+  </div>
+</body>
+</html>
