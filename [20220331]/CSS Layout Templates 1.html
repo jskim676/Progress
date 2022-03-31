@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0; box-sizing: border-box;}
+
+        body {
+            width:100vw;
+            height:100vh;
+
+        }
+
+
+
+        header {
+            width:100vw;
+            height:30vh;
+            background-color: rgb(228, 228, 228);
+            display:flex;
+            justify-content: center;
+            align-items: center ;
+        }
+
+        header > h1 {
+            font-size: 50px;
+        }
+
+        main {
+            width:100vw;
+            height:40vh;
+            display:flex;
+            flex-direction: row;
+        }
+
+        main > div:nth-child(1) {
+            width:30vw;
+            height:40vh;
+            background-color: #aaa;
+
+        }
+
+        main > div:nth-child(2) {
+            width:40vw;
+            height:40vh;
+            background-color: #bbb;
+
+        }
+        
+        main > div:nth-child(3) {
+            width:30vw;
+            height:40vh;
+            background-color: #ccc;
+
+        }
+
+        footer {
+            width:100vw;
+            height:10vh;
+            background-color:rgb(228, 228, 228);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width:600px) {
+            main {
+                flex-direction: column;
+            }
+
+            main > div:nth-child(1) {
+            width:100vw;
+            height:40/3vh;
+            background-color: #aaa;
+
+        }
+
+        main > div:nth-child(2) {
+            width:100vw;
+            height:40/3vh;
+            background-color: #bbb;
+
+        }
+        
+        main > div:nth-child(3) {
+            width:100vw;
+            height:40/3vh;
+            background-color: #ccc;
+
+        }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS Template using Flexbox</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus officia doloremque exercitationem. Cum, iste alias ullam incidunt sunt beatae!</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <header>
+        <h1>Header</h1>
+    </header>
+    <main>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+</html>
