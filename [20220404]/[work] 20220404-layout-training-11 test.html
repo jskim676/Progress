@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    ul {list-style-type: none;}
+
+      #root {
+        width:100vw;
+        height:100vh;
+      }
+      
+      #root > nav {
+        width:100vw;
+        height:15vh;
+        background-color: rgb(82, 82, 82);
+        
+        display:flex;
+        flex-direction:row;
+      }
+      
+      #root > nav > div {
+        width:25vw;
+        height:inherit;
+      }
+
+      #root > nav > div:nth-child(2) {
+        width:50vw;
+        height:50vh;
+        background-color: rgb(112, 112, 112);
+        
+        display:flex;
+        justify-content: space-around;
+
+      }
+
+      #root > nav > div:nth-child(2) > ul {
+        width:50vw;
+        height:5vh;
+        display:flex;
+        flex-direction: column;
+      }
+
+      #root > nav > div:nth-child(2) > ul > li {
+        width:10vw;
+        height:5vh;
+      }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <nav>
+      <div></div>
+      <div>
+        <ul class="menu-contain">menu-1
+          <li class="items">items-1</li>
+          <li class="items">items-2</li>
+          <li class="items">items-3</li>
+          <li class="items">items-4</li>
+          <li class="items">items-5</li>
+        </ul>
+        <ul class="menu-contain">menu-2
+          <li class="items">items-1</li>
+          <li class="items">items-2</li>
+          <li class="items">items-3</li>
+          <li class="items">items-4</li>
+          <li class="items">items-5</li>
+        </ul>
+        <ul class="menu-contain">menu-3
+          <li class="items">items-1</li>
+          <li class="items">items-2</li>
+          <li class="items">items-3</li>
+          <li class="items">items-4</li>
+          <li class="items">items-5</li>
+        </ul>
+        <ul class="menu-contain">menu-4
+          <li class="items">items-1</li>
+          <li class="items">items-2</li>
+          <li class="items">items-3</li>
+          <li class="items">items-4</li>
+          <li class="items">items-5</li>
+        </ul>
+        <ul class="menu-contain">menu-5
+          <li class="items">items-1</li>
+          <li class="items">items-2</li>
+          <li class="items">items-3</li>
+          <li class="items">items-4</li>
+          <li class="items">items-5</li>
+        </ul>
+      </div>
+      <div></div>
+    </nav>
+  </div>
+</body>
+</html>
