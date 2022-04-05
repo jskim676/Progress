@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    :root {
+      --color-1:#c4c4c4;
+      --color-2:#AAAAAA;
+      --color-3:#D3D3D3;
+      --color-4:#B8B8B8;
+    }
+
+    .flex-center-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color:var(--color-1);
+      display:flex;
+      flex-direction: row;
+    }
+
+    #root > nav {
+      width:8vw;
+      height:inherit;
+      background-color:var(--color-2);
+    }
+
+    #root > nav > #logo {
+      width:inherit;
+      height:15vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > nav > #logo > div {
+      width:70px;
+      height:70px;
+      background-color:var(--color-3);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > nav > #menu  {
+      width:inherit;
+      height:35vh;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      
+    }
+
+    #root > nav > #menu > div {
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background-color:var(--color-3);
+    }
+
+    #root > aside {
+      width:20vw;
+      height:inherit;
+      background-color:var(--color-4);
+      border-radius: 0 30px 30px 0;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #root > aside > #schedule {
+      width:inherit;
+      height:50%;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    #root > aside > #schedule > div:nth-child(1) {
+      width:16vw;
+      height:5vh;
+      background-color:var(--color-1);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > aside > #schedule > div:nth-child(2) {
+      width: 16vw;
+      height: 35vh;
+      background-color:var(--color-1);
+    }
+
+    #root > aside > #plan {
+      width:inherit;
+      height:40vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #root > aside > #plan > div {
+      width:16vw;
+      height:10vh;
+      background-color:var(--color-1);
+      display:flex;
+      align-items: center;
+    }
+
+    #root > aside > #plan > div > div {
+      width:50px;
+      height:50px;
+      background-color:var(--color-3);
+      margin-left: 1vw;
+    }
+
+    #root > main {
+      width:72vw;
+      height:inherit;
+      display:flex;
+      flex-direction: row;
+    }
+
+    #root > main > div:nth-child(1) {
+      width:52vw;
+      height:inherit;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > main > div:nth-child(2) {
+      width:20vw;
+      height:inherit;
+      display:flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #root > main > div:nth-child(2) > #weather {
+      width:18vw;
+      height:15vh;
+      border-radius:30px;
+      background-color:var(--color-2);
+
+      margin-top: 2.5vh;
+      margin-bottom: 2.5vh;
+    }
+
+    #root > main > div:nth-child(2) > #chat {
+      width:inherit;
+      height:80vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+
+    #root > main > div:nth-child(2) > #chat > div {
+      width:inherit;
+      height:10vh;
+      background-color:var(--color-2);
+      border-radius: 20px 20px 0 0 ;
+      display:flex;
+    }
+
+    #root > main > div:nth-child(2) > #chat > div:hover {
+      transition: 1s;
+      width:inherit;
+      height:60vh;
+      border-radius: 20px;
+
+    }
+
+    #root > main > div:nth-child(2) > #chat > div > div {
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      background-color:var(--color-1);
+      margin-left:15px;
+      margin-top:15px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <nav>
+      <div id="logo">
+        <div>logo</div>
+      </div>
+      <div id="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    <aside>
+      <div id="schedule">
+        <div>schedule</div>
+        <div></div>
+      </div>
+      <div id="plan">
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div>map</div>
+      <div>
+        <div id="weather"></div>
+        <div id="chat">
+          <div>
+            <div></div>
+          </div>
+        </div>  
+      </div>
+    </main>
+  </div>
+</body>
+</html>
