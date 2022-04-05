@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    :root{
+      --color-1:#898989;
+    }
+
+    body {
+      width:100vw;
+      height:130vh;
+      background-color: #C4E1F2;
+    }
+
+    header {
+      width:100vw;
+      height:25vh;
+      background-color:#FFDBE7;
+    }
+
+    header > div:nth-child(1) {
+      width:100vw;
+      height:20vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #logo {
+      width:80px;
+      height:80px;
+      background-color: #EDEDED;
+    }
+
+    header > div:nth-child(2) {
+      width:100vw;
+      height:5vh;
+      background-color: #FFB8C6;
+    }
+
+    main {
+      width:100vw;
+      height:115vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main > div {
+      width:90vw;
+      height:110vh;
+    }
+
+    /* 회원가입 */
+
+    .signup {
+      width: 90vw;
+      height:15vh;
+      display:flex;
+      align-items: center;
+      border:0px;
+    }
+
+    .signup > h1 {
+      width:35vw;
+      color:var(--color-1);
+    }
+
+    .signup > div {
+      width:50vw;
+      height:15vh;
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .signup > div > div {
+      width:80px;
+      height:80px;
+      border:1px solid black;
+      border-radius: 50%;
+    }
+
+    /* 성명, 생년월일, 아이디, 비밀번호, 핸드폰 번호 */
+
+    main > div > div {
+      width:90vw;
+      height:10vh;
+      color:var(--color-1);
+      border-bottom:1px solid var(--color-1);
+      margin-bottom: 20px;
+    }
+
+    /* 인증번호 */
+
+    main > div > div:nth-child(7)  {
+      width:90vw;
+      height:10vh;
+      border:0px;
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    main> div > div:nth-child(7) > div:nth-child(1) {
+      width:60vw;
+      height:inherit;
+      border-bottom: 1px solid var(--color-1);
+    }
+
+    main> div > div:nth-child(7) > div:nth-child(2) {
+      width: 100px;
+      height:40px;
+      background-color: #ccc;
+      border-radius: 10px;
+    }
+
+    /* 가입하기 */
+
+    main > div> div:nth-child(8) {
+      width:90vw;
+      height:8vh;
+      background-color: #ccc;
+      border:0px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+
+  </style>  
+</head>
+<body>
+  <header>
+    <div>
+      <div id="logo">
+        
+      </div>
+    </div>
+    <div>
+
+    </div>
+  </header>
+  <main>
+    <div>
+      <div class="signup">
+        <h1>회원가입</h1>
+        <div>
+          <div></div>
+        </div>
+      </div>
+      <div>
+        성명
+      </div>
+      <div>
+        생년월일
+      </div>
+      <div>
+        아이디
+      </div>
+      <div>
+        비밀번호
+      </div>
+      <div>
+        핸드폰번호
+      </div>
+      <div>
+        <div>
+          인증번호
+        </div>
+        <div></div>
+      </div>
+      <div>
+        가입하기
+      </div>
+    </div>
+  </main>
+</body>
+</html>
