@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    :root {
+      --color-1:rgb(196, 196, 196);
+      --color-2:rgb(221, 221, 221);
+    }
+    
+    .flex-center-center {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root {
+      width:100vw;
+      height:130vh;
+    }
+
+    /* 상단 */
+
+    #root > header {
+      width:100vw;
+      height:20vh;
+      background-color:var(--color-1);
+
+    }
+
+    #root > header > div {
+      width:85vw;
+      height:10vh;
+      display:flex;
+      flex-direction: row;
+      justify-content:space-between;
+      align-items: center;
+    }
+
+    #root > header > div > div:nth-child(1) {
+      width:40vw;
+      height:inherit;
+      background-color:var(--color-2);
+    }
+
+    #root > header > div > div:nth-child(2) {
+      width:60px;
+      height:60px;
+      border-radius: 30px;
+      background-color:var(--color-2);
+    }
+
+    /* 중단 */
+
+    #root > main {
+      width:100vw;
+      height:132vh;
+      display:flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    #root > main > div:nth-child(1) {
+      width:90vw;
+      height:50vh;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(1) {
+      width:inherit;
+      height:12vh;
+      
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+      width:inherit;
+      height:4vh;
+      display:flex;
+      flex-direction: row;
+      justify-content:space-around;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+      width:38vw;
+      height:3vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div {
+      width:2vw;
+      height:2vw;
+      border-radius: 50%;
+      background-color:var(--color-1);
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(2) {
+      width:inherit;
+      height:38vh;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(2) > div {
+      width:50vw;
+      height:35vh;
+      background-color:var(--color-1);
+      border-radius: 15px;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+      width:25vw;
+      border-radius: 15px 0 0 15px;
+    }
+
+    #root > main > div:nth-child(2) {
+      width:90vw;
+      height:30vh;
+
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    #root > main > div:nth-child(2) > div:nth-child(1) {
+      width:20vw;
+      height:4vh;
+      background-color:var(--color-1);
+    }
+
+    #root > main > div:nth-child(2) > div:nth-child(2) {
+      width:inherit;
+      height:5vh;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #root > main > div:nth-child(2) > div:nth-child(2) > div {
+      width:12vw;
+      height:12vw;
+      border-radius: 50%;
+      background-color: var(--color-1);
+    }
+
+    #root > main > div:nth-child(3) {
+      width:90vw;
+      height:52vh;
+
+      display:flex;
+      flex-direction: column;
+    }
+
+    #root > main > div:nth-child(3) > div:nth-child(1) {
+      width:inherit;
+      height:4vh;
+      
+      display:flex;
+      flex-direction: row;
+    }
+
+    #root > main > div:nth-child(3) > div:nth-child(1) > div {
+      width:45vw;
+      height:inherit;
+    }
+
+
+    #root > main > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+      width:20vw;
+      height:inherit;
+      background-color: var(--color-1);
+    }
+
+    #root > main > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) {
+      width:42vw;
+      height:inherit;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    #root > main > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+      width:15vw;
+      height:3vh;
+      background-color:var(--color-1);
+    }
+    
+    #root > main > div:nth-child(3) > div:nth-child(2) {
+      width:inherit;
+      height:inherit;
+
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #root > main > div:nth-child(3) > div:nth-child(2) > div {
+      width:70vw;
+      height:40vh;
+      background-color: var(--color-1);
+      border-radius: 15px;
+    }
+
+    #root > main > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) {
+      width:10vw;
+      height:40vh;
+      background-color: var(--color-1);
+      border-radius: 15px 0 0 15px;
+    }
+
+    /* 하단 */
+
+    #root > footer {
+      width:100vw;
+      height:8vh;
+      background-color:var(--color-1);
+    }
+
+    #root > footer > div {
+      width:80vw;
+      height:inherit;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    #root > footer > div > div {
+      width:40px;
+      height:40px;
+      border-radius: 20px;
+      background-color:var(--color-2);
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <header class="flex-center-center">
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <main>
+      <!-- 여행추천지 -->
+      <div>
+        <div>
+          <div>
+            <p>여행 추천지</p>
+            <p>맛집</p>
+            <p>액티비티</p>
+          </div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <!-- 쇼츠 영상 -->
+      <div>
+        <div></div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <!-- 여행지 글 -->
+      <div>
+        <div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </main>
+    <footer class="flex-center-center">
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
