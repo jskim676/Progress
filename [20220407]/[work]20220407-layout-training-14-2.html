@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width:100vw;
+      height:100vh;
+      display:flex;
+      flex-direction: column;
+
+      background-color:rgb(0, 144, 218);
+    }
+
+    #root > header {
+      width:inherit;
+      height:30vh;
+      display:flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    #root > header > h1 {
+      font-size: 50px;
+      color:white;
+    }
+
+    #root > main {
+      width:100vw;
+      height:70vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > main > div {
+      width:70vw;
+      height:50vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    #root > main > div > .id {
+      width:inherit;
+      height:12vh;
+    }
+
+    #root > main > div > .id > p {
+      width:inherit;
+      height:5vh;
+      font-size:30px;
+      color:white;
+    }
+
+    #root > main > div > .id > div {
+      width:inherit;
+      height:7vh;
+      background-color: rgb(238, 238, 238);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      color:rgb(20, 175, 255);
+    }
+
+    #root > main > div > .id > div > div {
+      width:60vw;
+      height: inherit;
+      display:flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    #root > main > div > .password {
+      width:inherit;
+      height:12vh;
+    }
+
+    #root > main > div > .password > p{
+      width:inherit;
+      height:5vh;
+      font-size:30px;
+      color:white;
+    }
+
+    #root > main > div > .password > div {
+      width:inherit;
+      height:7vh;
+      background-color: rgb(238, 238, 238);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      color:rgb(20, 175, 255);
+    }
+
+    #root > main > div > .password > div > div {
+      width:60vw;
+      height: inherit;
+      display:flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    #root > main > div > p {
+      width:inherit;
+      height:4vh;
+      color:white;
+    }
+
+    #root > main > div > div:nth-child(4) {
+      width:inherit;
+      height:8vh;
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    #root > main > div > div:nth-child(4) > p {
+      width:60vw;
+      height:6vh;
+      background-color:rgb(20, 175, 255);
+      border-radius: 15px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      color:white;
+      font-size:25px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <header>
+      <h1>
+        GREEN
+      </h1>
+    </header>
+    <main>
+      <div>
+        <div class="id">
+          <p>ID</p>
+          <div>
+            <div>
+              Please type to string 
+            </div>
+          </div>
+        </div>
+        <div class="password">
+          <p>PASSWORD</p>
+          <div>
+            <div>
+              Please type to string and number
+            </div>
+          </div>
+        </div>
+        <p>Can not access your account?</p>
+        <div>
+          <p>
+            Sign in
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
