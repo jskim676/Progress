@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    :root{
+      --color-1:#898989;
+    }
+
+    body {
+      width:100vw;
+      height:130vh;
+      background-color: #C4E1F2;
+    }
+
+    header {
+      width:100vw;
+      height:25vh;
+      background-color:#FFDBE7;
+    }
+
+    header > div:nth-child(1) {
+      width:100vw;
+      height:20vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #logo {
+      width:80px;
+      height:80px;
+      background-color: #EDEDED;
+    }
+
+    header > div:nth-child(2) {
+      width:100vw;
+      height:5vh;
+      background-color: #FFB8C6;
+    }
+
+    main {
+      width:100vw;
+      height:115vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main > div {
+      width:90vw;
+      height:110vh;
+    }
+
+    /* 회원가입 */
+
+    .login {
+      width: 90vw;
+      height:15vh;
+      display:flex;
+      align-items: center;
+      border:0px;
+    }
+
+    .login > h1 {
+      width:35vw;
+      color:var(--color-1);
+    }
+
+    .login > div {
+      width:50vw;
+      height:15vh;
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .box {
+      width:90vw;
+      height:40vh;
+    }
+
+    .box > div {
+      width:inherit;
+      height:20vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+
+    .box > div > div:nth-child(1) {
+      width:inherit;
+      height:3vh;
+    }
+
+    .box > div > div:nth-child(2) {
+      width:inherit;
+      border-bottom: 1px solid rgb(88, 88, 88);
+      height:8vh;
+    }
+
+    .box > div > div:nth-child(3) {
+      width:60vw;
+      height:3vh;
+      display:flex;
+      justify-content: flex-end;
+    }
+
+    main > div > div:nth-child(3) {
+      width:80vw;
+      height:10vh;
+      border:1px solid red;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+     }
+
+     main > div > div:nth-child(3) > div {
+       width:30vw;
+       height:6vh;
+       border-radius: 2vw;;
+       background-color:#a8a8a8;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+     }
+
+
+
+  </style>  
+</head>
+<body>
+  <header>
+    <div>
+      <div id="logo">
+        
+      </div>
+    </div>
+    <div>
+
+    </div>
+  </header>
+  <main>
+    <div>
+      <div class="login">
+        <h1>로그인</h1>
+      </div>
+      <div class="box">
+        <div>
+          <div>아이디</div>
+          <div></div>
+          <div>아이디를 잊으셨나요?</div>
+        </div>
+        <div>
+          <div>비밀번호</div>
+          <div></div>
+          <div>비밀번호를 잊으셨나요?</div>
+        </div>
+      </div>
+      <div>
+        <div>로그인</div>
+        <div>회원가입</div>
+      </div>
+      <div class="simple">
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
