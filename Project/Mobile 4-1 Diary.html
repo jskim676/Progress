@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    :root {
+      --color-1:rgba(196, 196, 196,1);
+      --color-2:rgba(221, 221, 221,1);
+      --color-leffer:rgba(80, 80, 80,1);
+    }
+    
+    .flex-center-center {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root {
+      width:100vw;
+      height:120vh;
+    }
+
+    /* 상단 */
+
+    #root > header {
+      width:100vw;
+      height:20vh;
+      background-color:var(--color-1);
+
+    }
+
+    #root > header > div {
+      width:85vw;
+      height:10vh;
+      display:flex;
+      flex-direction: row;
+      justify-content:space-between;
+      align-items: center;
+    }
+
+    #root > header > div > div:nth-child(1) {
+      /* width:40vw;
+      height:inherit;
+      background-color:var(--color-2); */
+    }
+
+    #root > header > div > div:nth-child(2) {
+      width:60px;
+      height:60px;
+      border-radius: 30px;
+      background-color:var(--color-2);
+    }
+
+    /* 중단 */
+
+    #root > main {
+      width:100vw;
+      height:92vh;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #root > main > div:nth-child(1) {
+      width:90vw;
+      height:30vh;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(1) {
+      width:90vw;
+      height:12vh;
+      display:flex;
+
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+      width:30vw;
+      height:inherit;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div {
+      width:16vw;
+      height:16vw;
+      background-color: var(--color-1);
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+      width:60vw;
+      height:inherit;
+
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(2) {
+      width:90vw;
+      height:48vh;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(2) > div {
+      width:85vw;
+      height:6vh;
+      border-bottom: 1px solid var(--color-1);
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div {
+      width:55vw;
+      height:6vh;
+      border-bottom:1px solid var(--color-1);
+    }
+
+    #root > main > div:nth-child(1) > div:nth-child(2) {
+      width:90vw;
+      height:48vh;
+    }
+    
+    #root > main > div:nth-child(2) {
+      width:90vw;
+      height:50vh;
+    }
+
+    #root > main > div:nth-child(2) > :nth-child(1) {
+      width:inherit;
+      height:15vh;
+      display:flex;
+      justify-content: center;
+    }
+    
+    #root > main > div:nth-child(2) > :nth-child(1) > div {
+      width:85vw;
+      height:inherit;
+      background-color:var(--color-1);
+    }
+
+    #root > main > div:nth-child(2) > :nth-child(2) {
+      width:inherit;
+      height:35vh;
+    }     
+
+    #root > main > div:nth-child(2) > :nth-child(2) > div {
+      width:inherit;
+      height:6vh;
+      border-bottom: 1px solid var(--color-1);
+    }
+
+    /* 하단 */
+
+    #root > footer {
+      width:100vw;
+      height:8vh;
+      background-color:var(--color-1);
+    }
+
+    #root > footer > div {
+      width:80vw;
+      height:inherit;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    #root > footer > div > div {
+      width:40px;
+      height:40px;
+      border-radius: 20px;
+      background-color:var(--color-2);
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <header class="flex-center-center">
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <main>
+      <!-- 첫번째 사진 -->
+      <div>
+        <div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <!-- 두번째 사진 -->
+      <div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </main>
+    <footer class="flex-center-center">
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
