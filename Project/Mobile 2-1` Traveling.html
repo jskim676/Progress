@@ -21,7 +21,7 @@
 
     #root {
       width:100vw;
-      height:120vh;
+      height:110vh;
     }
 
     /* 상단 */
@@ -59,7 +59,7 @@
 
     #root > main {
       width:100vw;
-      height:92vh;
+      height:82vh;
       display:flex;
       flex-direction: column;
       justify-content: space-around;
@@ -71,7 +71,7 @@
       height:85vh;
       display:flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-evenly;
       align-items: center;
     }
 
@@ -82,43 +82,90 @@
     }
 
     #root > main > div > .feeling {
-      width:inherit;
-      height:24vh;
+      width:85vw;
+      height:45vh;
+      background-color:var(--color-2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
     }
 
     #root > main > div > .feeling > div:nth-child(1) {
-      width:inherit;
-      height:16vh;
+      width:80vw;
+      height:15vh;
       display:flex;
-      flex-direction: row;
-      justify-content: space-between;
       align-items: center;
     }
- 
-    #root > main > div > .feeling > div:nth-child(1) > div:nth-child(1) {
-      width:80px;
-      height:80px;
+
+    #root > main > div > .feeling > div:nth-child(1) > div {
+      width:20vw;
+      height:20vw;
+      background-color: var(--color-1);
+    }
+
+
+    #root > main > div > .feeling > div:nth-child(2) {
+      width:inherit;
+      height:6vh;
+      border-bottom: 2px solid var(--color-1);
+    }
+
+    #root > main > div > .feeling > div:nth-child(3) {
+      width:inherit;
+      height:13vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #root > main > div > .feeling > div:nth-child(3) > div:nth-child(1) {
+      width:inherit;
+      height:10vh;
+      display:flex;
+      justify-content: space-around;
+    } 
+
+    #root > main > div > .feeling > div:nth-child(3) > div:nth-child(1) > div {
+      width:15vw;
+      height:15vw;
       background-color:var(--color-1);
     }
 
-    #root > main > div > .feeling > div:nth-child(1) > div:nth-child(2) {
-      width:60vw;
-      height:16vh;
+    .triangle > div  {
+      width:10vw;
+      height:3vh;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+
+      position:absolute;
+      top:96vh;
+      left:45vw;
     }
 
-    #root > main > div > .feeling > div:nth-child(1) > div:nth-child(2) > div {
-      width:inherit;
-      height:8vh;
-      border-bottom: 1px solid var(--color-1);
+    .triangle > div > div:nth-child(1) {
+      width: 4vw;
+      height: 4vw;
+      border-top: 4vw solid var(--color-1);
+      border-left: 2vw solid transparent;
+      border-right: 2vw solid transparent;
+      
+      position:absolute;
     }
 
-    
-    #root > main > div > .feeling > div:nth-child(2) {
-      width:inherit;
-      height:8vh;
-      border-bottom:1px solid var(--color-1);
-    }
+    .triangle > div > div:nth-child(2) {
+      width: 4vw;
+      height: 4vw;
+      border-top: 4vw solid var(--color-1);
+      border-left: 2vw solid transparent;
+      border-right: 2vw solid transparent;
 
+      position:absolute;
+      top:1vh;
+
+    }
 
     /* 하단 */
 
@@ -160,33 +207,32 @@
         <div class="feeling">
           <div>
             <div></div>
-            <div>
-              <div></div>
-              <div></div>
-            </div>
           </div>
           <div></div>
-        </div>
-        <div class="feeling">
           <div>
-            <div></div>
             <div>
+              <div></div>
+              <div></div>
               <div></div>
               <div></div>
             </div>
           </div>
+        </div>
+      </main>
+      <footer class="flex-center-center">
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </footer>
+      <div class="triangle">
+        <div>
+          <div></div>
           <div></div>
         </div>
       </div>
-    </main>
-    <footer class="flex-center-center">
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </footer>
   </div>
 </body>
 </html>
