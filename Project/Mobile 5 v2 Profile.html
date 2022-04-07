@@ -22,7 +22,7 @@
 
     #root {
       width:100vw;
-      height:120vh;
+      height:130vh;
     }
 
     /* 상단 */
@@ -56,7 +56,7 @@
 
     #root > main {
       width:100vw;
-      height:92vh;
+      height:102vh;
       display:flex;
       justify-content: center;
     }
@@ -118,56 +118,39 @@
       width:30vw;
     }
 
-    #root > main > div > div:nth-child(3) {
-      width:80vw;
-      height:35vh;
+    #root> main > div > div:nth-child(3) {
+      width:90vw;
+      height:45vh;
       display:flex;
       flex-direction: column;
-      justify-content: space-around;
-      align-items: flex-end;
-    }
-
-    #root > main > div > div:nth-child(3) > div:nth-child(1) {
-      width:inherit;
-      height:4vh;
-      display:flex;
-    }
-
-    #root > main > div > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) {
-      width:40vw;
-      height:4vh;
-    }
-
-    #root > main > div > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div {
-      width:40vw;
-      height:4vh;
-    }
-
-    #root > main > div > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) {
-      width:40vw;
-      height:4vh;
-      display:flex;
-      justify-content: flex-end;
-    }
-
-    #root > main > div > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div {
-      width:20vw;
-      height:4vh;
-      background-color:var(--color-2);
-    }
-
-    #root > main > div > div:nth-child(3) > div:nth-child(2){
-      width:inherit;
-      height:25vh;
-      display:flex;
       justify-content: space-between;
+      align-items: center;
     }
-    
-    #root > main > div > div:nth-child(3) > div:nth-child(2) > div {
-      width:35vw;
-      height:25vh;
-      background-color:var(--color-2);
-      border-radius:15px;
+
+
+    #root> main > div > div:nth-child(3) > .list {
+      width:80vw;
+      height:12vh;
+      background-color:var(--color-1);
+      border-radius: 20vw;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root> main > div > div:nth-child(3) > .list > div{
+      width:76vw;
+      height:10vh;
+      display:flex;
+      align-items: center;
+
+    }
+
+    #root> main > div > div:nth-child(3) > .list > div > div {
+      width:18vw;
+      height:18vw;
+      border-radius: 50%;
+      background-color: var(--color-2);
     }
 
 
@@ -218,19 +201,27 @@
             <div></div>
           </div>
         </div>
-        <!-- 지난 여행 -->
         <div>
-          <div>
+          <div class="list">
             <div>
-              <div>Past Travel</div>
-            </div>
-            <div>
-              <div></div>
+              <div>
+                <div></div>
+              </div>
             </div>
           </div>
-          <div>
-            <div></div>
-            <div></div>
+          <div class="list">
+            <div>
+              <div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <div>
+                <div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
