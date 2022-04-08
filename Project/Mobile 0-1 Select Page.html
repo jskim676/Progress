@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    :root{
+      --color-1:#898989;
+    }
+
+
+
+    #root {
+      width:100vw;
+      height:100vh;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      background-image: url(https://images.unsplash.com/photo-1594179594534-9d826c107c10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #root > div {
+      width:85vw;
+      height:70vh;
+    }
+
+    #root > div > div:nth-child(1) {
+      width:inherit;
+      height:30vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div > div:nth-child(1) > div {
+      width:25vw;
+      height:25vw;
+      background-color: rgb(199, 199, 199);
+    }
+
+    #root > div > div:nth-child(2) {
+      width:inherit;
+      height:30vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    #root > div > div:nth-child(2) > div {
+      width:inherit;
+      height:8vh;
+      border-radius: 10px;
+      background-color:rgb(199, 199, 199);
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>
+      <div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
