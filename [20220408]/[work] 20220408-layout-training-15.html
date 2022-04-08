@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    body {
+      width:100vw;
+      height:100vh;
+    }
+    
+    #root {
+      width:100vw;
+      height:100vh;
+      border:1px solid black;
+      background-color:#ededed;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div {
+      width:48vw;
+      height:88vh;
+      border:1px solid black;
+      background-color: rgb(228, 228, 228);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #root > div:nth-child(2) > div {
+      width:44vw;
+      height:40vh;
+      border:1px solid black;
+      background-color: rgb(212, 212, 212);    
+      display:flex;
+      justify-content: center;
+      align-items: center;  
+    }
+
+    #root > div:nth-child(2) > div:nth-child(2) > div {
+      width:20vw;
+      height:32vh;
+      border:1px solid black;
+      background-color: rgb(185, 185, 185);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) div {
+      width:8vw;
+      height:20vh;
+      border:1px solid black;
+      background-color: rgb(161, 161, 161);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) div:nth-child(1) > div{
+      width:4vw;
+      height:4vw;
+      border:0;
+      background-color:rgb(255, 87, 87);
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+    <div>
+      <div></div>
+      <div>
+        <div>
+          <div>
+            <div></div>
+          </div>
+          <div></div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
