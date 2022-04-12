@@ -65,11 +65,14 @@
 }
 
 #root > main > div:nth-child(2) > div:nth-child(1) {
-  width:90vw;
+  width:95vw;
   height:15vh;
-  font-size: 90px;
+  font-size: 80px;
   font-weight: bold;
   color:rgb(114, 114, 114);
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #root > main > div:nth-child(2) > div:nth-child(2) {
@@ -94,6 +97,9 @@
   height:inherit;
   line-height: 5vh;
   color:rgb(114, 114, 114);
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #root > main > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
@@ -116,14 +122,14 @@
 }
 
 #root > .circle-2 {
-  width:40vw;
-  height:40vw;
+  width:50vw;
+  height:50vw;
   border-radius: 50%;
   background-color: rgb(237, 237, 237);
 
   position:absolute;
-  top:-25vh;
-  left:70vw;
+  top:-35vh;
+  left:65vw;
   z-index: -1;
 }
 
