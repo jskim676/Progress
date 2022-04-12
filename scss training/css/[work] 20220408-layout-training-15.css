@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ccc;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > div {
+  width: 45vw;
+  height: 90vh;
+  background-color: #cecece;
+  border: 1px solid black;
+}
+
+#root > div:nth-child(2) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > div:nth-child(2) > div {
+  width: 40vw;
+  height: 35vh;
+  background-color: #b8b8b8;
+  border: 1px solid black;
+}
+
+#root > div:nth-child(2) > div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > div:nth-child(2) > div:nth-child(2) > div {
+  width: 16vw;
+  height: 25vh;
+  background-color: #a5a5a5;
+  border: 1px solid black;
+}
+
+#root > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div {
+  width: 6vw;
+  height: 15vh;
+  background-color: #919191;
+  border: 1px solid black;
+}
+
+#root > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div {
+  width: 4vw;
+  height: 8vh;
+  background-color: salmon;
+}
+/*# sourceMappingURL=[work] 20220408-layout-training-15.css.map */

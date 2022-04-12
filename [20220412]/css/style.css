@@ -5,6 +5,8 @@
   height:200vh;
 }
 
+  /* 상단 */
+
 #root > header {
   width:100vw;
   height:8vh;
@@ -37,6 +39,8 @@
   align-items: center;
   color:rgb(114, 114, 114);
 }
+
+  /* 중단 */
 
 #root > main {
   width:inherit;
@@ -97,6 +101,8 @@
   height:inherit;
 }
 
+  /* 원 */
+
 #root > .circle-1 {
   width:30vw;
   height:30vw;
@@ -120,6 +126,8 @@
   left:70vw;
   z-index: -1;
 }
+
+  /* 하단 */
 
 #root > footer {
   width:100vw;
