@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      *{margin:0; padding:0; box-sizing: border-box;}
+
+    .partial {
+      background-image:url(https://w.namu.la/s/2fa025715fe1ba222e432af1e2c35e9c91a9ff27225b68e7d05b72fcd067feb82e6471549c54c729560c7a14972daa5ecd653b83d01ecbd1c3f815ab789f22203913aead3d890be81a595166c2674c86f682fc8f0bb3b50ec57cd144b17ed6fbadb1c5117c4811d0bf5d1189bb51c05e) ;
+      background-position:-750px -100px;
+      width:300px; height:300px;
+    }
+
+    div:nth-child(5) {
+      width:1215px;
+      height:717px;
+      background-image:url(https://w.namu.la/s/2fa025715fe1ba222e432af1e2c35e9c91a9ff27225b68e7d05b72fcd067feb82e6471549c54c729560c7a14972daa5ecd653b83d01ecbd1c3f815ab789f22203913aead3d890be81a595166c2674c86f682fc8f0bb3b50ec57cd144b17ed6fbadb1c5117c4811d0bf5d1189bb51c05e) ;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    div:nth-child(5) > div {
+      width:inherit;
+      height:inherit;
+      backdrop-filter: blur(50px);
+    }
+
+    </style>
+</head>
+<body>
+    
+    <div>부분</div>
+    <div class='partial'></div>
+    
+    <hr>
+    <div>전체</div>
+    <div>
+      <div></div>
+    </div>
+    
+</body>
+</html>
