@@ -33,6 +33,9 @@
           background-color: rgb(120, 120, 120);
         }
         
+        // Menu 부분에 포지션을 사용하지 않고 해결할 수 있는 방법이 혹시 있을까? 
+
+        // Menu 
         & > div:nth-child(2) {
           width:56vw;
           height:26vh;
@@ -63,12 +66,14 @@
                 height:20vh;
                 font-size: 12px;
 
-                @include flex-setting(center,flex-start );
+                @include flex-setting(center,center );
                 flex-direction: column;
                 
                 & > li {
                   width:5vw;
                   height:4vh;
+
+                  @include flex-setting(center,center );
                 }
               }
             }
