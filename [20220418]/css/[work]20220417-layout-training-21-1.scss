@@ -1,0 +1,207 @@
+  *{margin:0; padding:0; box-sizing: border-box;}
+
+  li {list-style-type:none;}
+
+
+  @mixin flex-setting ($a,$b) {
+    display:flex;
+    justify-content: $a;
+    align-items: $b;
+  }
+
+  #root {
+    width:100vw;
+    height:100vh;
+    background-color: rgb(171, 171, 171);
+
+    & > header {
+      width:inherit;
+      height:10vh;
+      background-color: rgb(196, 196, 196);
+
+      @include flex-setting(center, center );
+      
+      & > div {
+        width:98vw;
+        height:8vh;
+        
+        @include flex-setting(space-between,center );
+
+        & > div:nth-child(1) {
+          width:10vw;
+          height:inherit;
+          background-color: rgb(120, 120, 120);
+        }
+        
+        & > div:nth-child(2) {
+          width:56vw;
+          height:26vh;
+          background-color:rgb(120, 120, 120);
+          
+          position:absolute;
+          top:1vh;
+          right:1vw;
+          z-index: 2;
+
+          @include flex-setting(center,center );
+
+          & > div{
+            width:56vw;
+            height:22vh;
+
+            @include flex-setting(space-evenly,center );
+
+            & > div {
+              width:13vw;
+              height:22vh;
+              background-color: rgb(171, 171, 171);
+
+              @include flex-setting(center,center );
+
+              & > ul {
+                width:5vw;
+                height:20vh;
+                font-size: 12px;
+
+                @include flex-setting(center,flex-start );
+                flex-direction: column;
+                
+                & > li {
+                  width:5vw;
+                  height:4vh;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+    & > main {
+      width:inherit;
+      height:80vh;
+
+      & > div:nth-child(1) {
+        width:inherit;
+        height:50vh;
+
+        & > div {
+          width:33vw;
+          height:33vh;
+        }
+
+        & > div:nth-child(1) {
+          background-color: rgb(196, 196, 196);
+          position:absolute;
+          left:5vw;
+          top:15vh;
+          z-index:4;
+        }
+
+        & > div:nth-child(2) {
+          background-color: rgb(79, 79, 79);
+          position:absolute;
+          left:7vw;
+          top:20vh;
+          z-index:3;
+        }
+        
+        & > div:nth-child(3) {
+          background-color: rgb(52, 52, 52);
+          position:absolute;
+          left:9vw;
+          top:25vh;
+          z-index:2;
+        }
+      }
+
+      & > div:nth-child(2) {
+        width:inherit;
+        height:30vh;
+        background-color: rgb(148, 148, 148);
+
+        @include flex-setting(center,center );
+
+        & > div {
+          width:98vw;
+          height:28vh;
+
+          @include flex-setting(space-between,center );
+
+          & > div {
+            width:32vw;
+            height:inherit;
+            background-color: rgb(196, 196, 196);
+          }
+
+          & > div:nth-child(1) {
+
+            display:flex;
+
+            & > div {
+              width:16vw;
+              height:24vh;
+              background-color: rgb(79, 79, 79);
+              
+              position:relative;
+              left:2vw;
+              top:1vh;
+              
+              z-index:2;
+
+              @include flex-setting(space-evenly,center );
+              flex-direction: column;
+
+              & > div:nth-child(1) {
+                width:15vw;
+                height:7vh;
+                background-color: rgb(196, 196, 196);
+              }
+              
+              & > div:nth-child(2) {
+                width:15vw;
+                height:14vh;
+                background-color: rgb(196, 196, 196);
+              }
+            }
+
+            & > div:nth-child(2) {
+              background-color: rgb(45, 45, 45);
+
+              position:relative;
+              left:-1vw;
+              top:3vh;
+
+              z-index:3;
+            }
+          }
+        }
+      }
+    }
+    & > footer {
+      width:inherit;
+      height:10vh;
+      background-color:rgb(120, 120, 120);
+
+      @include flex-setting(center,center );
+
+      & > div {
+        width:98vw;
+        height:8vh;
+
+        @include flex-setting(space-between,center );
+
+        & > div {
+          width:28vw;
+          height:inherit;
+          background-color:rgb(195, 195, 195);
+        }
+        
+        & > div:nth-child(2) {
+          width:40vw;
+        }
+      }
+    }
+    
+  }

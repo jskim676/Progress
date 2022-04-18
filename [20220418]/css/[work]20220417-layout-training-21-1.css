@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ababab;
+}
+
+#root > header {
+  width: inherit;
+  height: 10vh;
+  background-color: #c4c4c4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > header > div {
+  width: 98vw;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > header > div > div:nth-child(1) {
+  width: 10vw;
+  height: inherit;
+  background-color: #787878;
+}
+
+#root > header > div > div:nth-child(2) {
+  width: 56vw;
+  height: 26vh;
+  background-color: #787878;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > header > div > div:nth-child(2) > div {
+  width: 56vw;
+  height: 22vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > header > div > div:nth-child(2) > div > div {
+  width: 13vw;
+  height: 22vh;
+  background-color: #ababab;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > header > div > div:nth-child(2) > div > div > ul {
+  width: 5vw;
+  height: 20vh;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root > header > div > div:nth-child(2) > div > div > ul > li {
+  width: 5vw;
+  height: 4vh;
+}
+
+#root > main {
+  width: inherit;
+  height: 80vh;
+}
+
+#root > main > div:nth-child(1) {
+  width: inherit;
+  height: 50vh;
+}
+
+#root > main > div:nth-child(1) > div {
+  width: 33vw;
+  height: 33vh;
+}
+
+#root > main > div:nth-child(1) > div:nth-child(1) {
+  background-color: #c4c4c4;
+  position: absolute;
+  left: 5vw;
+  top: 15vh;
+  z-index: 4;
+}
+
+#root > main > div:nth-child(1) > div:nth-child(2) {
+  background-color: #4f4f4f;
+  position: absolute;
+  left: 7vw;
+  top: 20vh;
+  z-index: 3;
+}
+
+#root > main > div:nth-child(1) > div:nth-child(3) {
+  background-color: #343434;
+  position: absolute;
+  left: 9vw;
+  top: 25vh;
+  z-index: 2;
+}
+
+#root > main > div:nth-child(2) {
+  width: inherit;
+  height: 30vh;
+  background-color: #949494;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > main > div:nth-child(2) > div {
+  width: 98vw;
+  height: 28vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > main > div:nth-child(2) > div > div {
+  width: 32vw;
+  height: inherit;
+  background-color: #c4c4c4;
+}
+
+#root > main > div:nth-child(2) > div > div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#root > main > div:nth-child(2) > div > div:nth-child(1) > div {
+  width: 16vw;
+  height: 24vh;
+  background-color: #4f4f4f;
+  position: relative;
+  left: 2vw;
+  top: 1vh;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root > main > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(1) {
+  width: 15vw;
+  height: 7vh;
+  background-color: #c4c4c4;
+}
+
+#root > main > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) {
+  width: 15vw;
+  height: 14vh;
+  background-color: #c4c4c4;
+}
+
+#root > main > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) {
+  background-color: #2d2d2d;
+  position: relative;
+  left: -1vw;
+  top: 3vh;
+  z-index: 3;
+}
+
+#root > footer {
+  width: inherit;
+  height: 10vh;
+  background-color: #787878;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > footer > div {
+  width: 98vw;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > footer > div > div {
+  width: 28vw;
+  height: inherit;
+  background-color: #c3c3c3;
+}
+
+#root > footer > div > div:nth-child(2) {
+  width: 40vw;
+}
+/*# sourceMappingURL=[work]20220417-layout-training-21-1.css.map */

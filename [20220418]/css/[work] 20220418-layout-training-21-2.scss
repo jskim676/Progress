@@ -1,0 +1,55 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+
+@mixin flex-setting ($a,$b) {
+  display:flex;
+  justify-content: $a;
+  align-items: $b;
+}
+
+  #root {
+    width:100vw;
+    height:150vh;
+
+
+    & > header {
+    width:inherit;
+    height:10vh;
+
+    
+    @include flex-setting(center,center );
+    
+      & > div:nth-child(1) {
+      width:90vw;
+      height:8vh;
+
+      @include flex-setting(space-between,center );
+
+        & > div:nth-child(1) {
+        width:50px;
+        height:50px;
+        background-color:salmon;
+      }
+
+        & > div:nth-child(2) {
+        width:24vw;
+        height:inherit;
+        font-size: 12px;
+
+        @include flex-setting(space-evenly,center );
+      }
+    }
+
+    & > main {
+      width:inherit;
+      height:90vh;
+      border:1px solid red;
+      
+    }
+
+    & > footer {
+      width:inherit;
+      height:50vh;
+      background-color: rgb(19, 19, 30);
+    }
+  }
+}
