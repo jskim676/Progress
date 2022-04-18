@@ -39,9 +39,9 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #root > header > div > div:nth-child(1) {
@@ -54,10 +54,7 @@ li {
   width: 56vw;
   height: 26vh;
   background-color: #787878;
-  position: absolute;
-  top: 1vh;
-  right: 1vw;
-  z-index: 2;
+  overflow: visible;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

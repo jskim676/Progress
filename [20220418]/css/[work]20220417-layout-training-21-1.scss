@@ -25,29 +25,23 @@
         width:98vw;
         height:8vh;
         
-        @include flex-setting(space-between,center );
-
+        @include flex-setting(space-between,flex-start );
+        
         & > div:nth-child(1) {
           width:10vw;
           height:inherit;
           background-color: rgb(120, 120, 120);
         }
         
-        // Menu 부분에 포지션을 사용하지 않고 해결할 수 있는 방법이 혹시 있을까? 
-
-        // Menu 
+        
         & > div:nth-child(2) {
           width:56vw;
           height:26vh;
           background-color:rgb(120, 120, 120);
+          overflow:visible;
           
-          position:absolute;
-          top:1vh;
-          right:1vw;
-          z-index: 2;
-
           @include flex-setting(center,center );
-
+          
           & > div{
             width:56vw;
             height:22vh;
