@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 200vh;
+  background-color: #333333;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root > main {
+  width: 80vw;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > main > div:nth-child(1) {
+  width: 45vw;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root > main > div:nth-child(1) > div:nth-child(1) {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  background-color: #ff6464;
+}
+
+#root > main > div:nth-child(1) > div:nth-child(2) {
+  width: inherit;
+  height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root > main > div:nth-child(1) > div:nth-child(2) > div {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+
+#root > main > div:nth-child(2) {
+  width: 35vw;
+  height: inherit;
+}
+
+#root > main > div:nth-child(3) {
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  border: 4px solid #ffc83a;
+  position: absolute;
+  top: 25vh;
+  z-index: 2;
+}
+
+#root > .section {
+  width: inherit;
+  height: 145vh;
+  position: absolute;
+  z-index: 5;
+  top: 47vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root > .section > div {
+  width: 90vw;
+  height: 70vh;
+}
+
+#root > .section > div > div {
+  width: inherit;
+  height: inherit;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background-color: rgba(200, 200, 200, 0.2);
+  border-radius: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#root > .section > div > div > h1 {
+  width: 80vw;
+  height: 20vh;
+  /* background-color: #fff; */
+  margin: 3vw;
+  font-size: 120px;
+  color: #fff;
+  font-weight: 900;
+}
+/*# sourceMappingURL=[work] 20220419-layout-training-22.css.map */
