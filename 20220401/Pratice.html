@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    :root {
+      --color-1:rgb(217, 120, 120);
+      --color-2:rgb(212, 78, 55);
+    }
+
+    body { 
+      width:100vw;
+      height:100vh;
+      background-color:black;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      width:95vw;
+      height:96vh;
+    }
+
+    main > header {
+      width:inherit;
+      height:48vh;
+      display:flex;
+      flex-direction: row;
+    }
+
+    main > header > div:nth-child(1) {
+      width:15vw;
+      height:inherit;
+      background-color:rgb(255, 140, 140);
+    }
+
+    /* organic fruit */
+    main > header > div:nth-child(2) {
+      width:32.5vw;
+      height: inherit;
+      background-color:rgb(49, 49, 4);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      color:rgb(235, 235, 235);
+    }
+
+    main > header > div:nth-child(3) {
+      width:15vw;
+      height:inherit;
+      background-color:var(--color-1);
+    }
+
+    main > header > div:nth-child(3) > div:nth-child(1) {
+      width:15vw;
+      height:32vh;
+      background-color:var(--color-2);
+      border-radius:50%;
+    }
+
+    main > header > div:nth-child(3) > div:nth-child(2) {
+      width:15vw;
+      height:16vh;
+      background-color:var(--color-2);
+      border-radius: 100em 100em 0 0 ;
+    }
+
+    main > header > div:nth-child(4) {
+      width:32.5vw;
+      height:inherit;
+      background-color:var(--color-2);
+    }
+
+    main > header > div:nth-child(4) > div:nth-child(1) {
+      width:32.5vw;
+      height:24vh;
+      background-color:rgb(139, 156, 50);
+    }
+
+    main > header > div:nth-child(4) > div:nth-child(2) {
+      width:32.5vw;
+      height:24vh;
+      background-color:var(--color-2);
+    }
+
+    main > footer {
+      width:inherit;
+      height:48vh;
+      display:flex;
+      flex-direction: row;
+    }
+    
+    main > footer > div:nth-child(1) {
+      width:15vw;
+      height:inherit;
+      background-color:var(--color-2);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      color:rgb(235, 235, 235);
+    }
+
+    main > footer > div:nth-child(2) {
+      width:15vw;
+      height: inherit;
+      background-color:rgb(198, 209, 59);
+    }
+
+    main > footer > div:nth-child(2) > div:nth-child(1){
+      width:15vw;
+      height:24vh;
+      display:flex;
+      flex-direction: row;
+    }
+
+    main > footer > div:nth-child(2) > div:nth-child(1) > div:nth-child(1){
+      width:7.5vw;
+      height:24vh;
+    }
+
+    main > footer > div:nth-child(2) > div:nth-child(1) > div:nth-child(2){
+      width:7.5vw;
+      height:24vh;
+      border:1px solid red;
+    }
+
+
+    main > footer > div:nth-child(2) > div:nth-child(2){
+      width:15vw;
+      height:24vh;
+      background-color:rgb(222, 211, 195);
+      display:flex;
+      flex-direction: row;
+    }
+
+    main > footer > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+      width:5vw;
+      height:24vh;
+      background-color:var(--color-1);
+      border-radius: 0 100em 100em 0;
+    }
+
+    main > footer > div:nth-child(2) > div:nth-child(2) > div:nth-child(2){
+      width:5vw;
+      height:24vh;
+      background-color:var(--color-1);
+      border-radius: 100em 0 0 100em;
+    }
+
+    main > footer > div:nth-child(2) > div:nth-child(2) > div:nth-child(3){
+      width:5vw;
+      height:24vh;
+      background-color:var(--color-1);
+      border-radius: 100em 0 0 100em;
+    }
+
+    main > footer > div:nth-child(3) {
+      width:35vw;
+      height:inherit;
+      background-color:rgb(255, 182, 87);
+    }
+
+    /* natural */
+    main > footer > div:nth-child(4) {
+      width:15vw;
+      height:inherit;
+      background-color:rgb(73, 38, 99);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      color:rgb(235, 235, 235);
+    }
+
+    main > footer > div:nth-child(5) {
+      width:15vw;
+      height:inherit;
+      background-color:rgb(222, 211, 195);
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div></div>
+      <div>organic fruit</div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <footer>
+      <div>package</div>
+      <div>
+        <div>
+          <div></div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div></div>
+      <div>natural</div>
+      <div></div>
+    </footer>
+  </main>
+</body>
+</html>
