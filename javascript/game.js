@@ -6,13 +6,9 @@
 
 
     let game = {
-      1 : "lol",
-      2 : "steam",
-      3 : "apexlegend",
-      4 : "pubg",
-      5 : "maple"
+      "1" : "lol",
+      "2" : "steam",
+      "3" : "apexlegend",
+      "4" : "pubg",
+      "5" : "maple"
     }
-
-    console.log(game.console.log(day));
-
-

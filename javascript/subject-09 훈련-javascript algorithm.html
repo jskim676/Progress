@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+
+    
+  </div>
+
+  <script>
+    /* 
+    ? 도전해보기 ★★★★★★★★★★★★★★★★★★★★★★★★
+    TODO: 아래의 자바스크립트 명령에 대한 의도를 유추 하시오.
+    */
+    document.body.style.padding = "0";
+    // body의 style에 있는 padding 값을 0으로 지정
+    document.body.style.margin = "0";
+    // body의 style에 있는 margin 값을 0으로 지정
+    const root = document.getElementById("root");
+    // "root"라는 id값을 가진 요소를 root 라고 변수 지정
+    let widthValue = 100;
+    // widthValue 라는 변수에 100이라는 숫자를 정의
+    let heightValue = 100;
+    // heightValue 라는 변수에 100이라는 숫자를 정의
+    root.style.width = `${widthValue}vw`;
+    // root 변수의 스타일 width 값을 '${widthValue}vw`로 정의
+    root.style.height = `${heightValue}vh`;
+    // root 변수의 스타일 height 값을 '${widthValue}vw`로 정의
+    root.style.backgroundColor = "darkblue";
+    // root 변수의 스타일 backgroundColor 값을 "darkblue" 으로 정의
+    let backgroundColorArray = ["#ff0000", "#333333"];
+    // backgroundColorArray 변수에는 "#ff0000", 와 "#333333"가 있다고 정의
+    let setSwitch = 0;
+    // setSwitch라는 변수에 0이라는 숫자를 대입
+    root.addEventListener("click", function() {
+      // root라는 변수에 이벤트를 추가한다 (클릭하게 될시 함수를 실행하여라 )
+      if(setSwitch === 0) {
+        // 만약 setSwitch값이 0이라면
+        root.style.backgroundColor = backgroundColorArray[1];
+        // root라는 변수의 backgroundColor 스타일 값은 backgroundColorArray의 index 1인 값으로 지정
+        setSwitch = 1;
+        // 그리고 setSwitch는 1로 지정
+      } else {
+        // 그렇지 않다면 - (setSwitch값이 0이 아니라면) - (한번 클릭을 하게 될 시에는 setSwitch값이 1로 바뀜)
+        root.style.backgroundColor = backgroundColorArray[0];
+        // root 라는 변수의 backgroundColor 스타일 값은 backgroundColorArray의 index 0인 값으로 지정
+        setSwitch = 0;
+        // 그리고 setSwitch는 0으로 지정
+      }
+
+    });
+
+
+
+
+    
+
+
+  </script>
+</body>
+</html>
