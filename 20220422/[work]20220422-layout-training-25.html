@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+</body>
+<script>
+
+const body = document.querySelector("body");
+const div = document.querySelector("div");
+
+
+const number = 100;
+
+body.style.width = number + "vw"
+body.style.height = number + "vw"
+body.style.display = "flex"
+body.style.justifyContent = "center"
+body.style.alignItems = "center"
+
+
+div.style.backgroundColor = "rgb(87,87,87)"
+div.style.width = number + "px"
+div.style.height = number + "px"
+div.style.borderRadius = "50%"
+div.textContent = "<div>"
+div.style.display = "flex"
+div.style.justifyContent = "center"
+div.style.alignItems = "center"
+div.style.color = "white"
+
+div.addEventListener("click",function(){
+  const result = number + 100 ;
+  div.style.width = result + "px";
+  div.style.height = result + "px";
+
+}) 
+
+
+console.log(div);
+console.dir(div);
+
+</script>
+</html>

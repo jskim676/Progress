@@ -11,7 +11,7 @@ const categories = {
   yordle : ["나르","럼블", "룰루", "베이가", "벡스", "뽀삐", "아무무", "직스", "케넨", "코르키", "클레드", "트리스타나", "티모", "피즈", "하이머딩거"]
 }
 
-const answer = "니코"
+const answer = "제드"
 const yes = true
 const no = false
 
