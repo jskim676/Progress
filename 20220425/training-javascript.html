@@ -42,8 +42,9 @@ const two = section.children[1];
 const three = section.children[2];
 
 
-const result = 25%3;
+const result = 25/3 + "vw";
 
+console.log(result);
 
 root.style.width = "100vw";
 root.style.height = "100vh";
@@ -71,25 +72,27 @@ h1.style.color = "rgb(202, 74, 74)";
 h1.style.fontSize = "50px";
 h1.style.fontWeight = "lighter";
 h1.style.margin = "0";
+// 자바스크립트로 하게 되니 h1 태그에 마진값이 들어갔다.
 
 p.style.color = "rgb(202, 74, 74)";
 p.style.margin = "0";
+// 자바스크립트로 하게 되니 p 태그에 마진값이 들어갔다.
 
 section.style.width = "30vw";
-section.style.height = "8vw";
+section.style.height = result;
 section.style.display = "flex";
 section.style.justifyContent = "space-between";
 
-one.style.width = "8vw";
-one.style.height = "8vw";
+one.style.width = result;
+one.style.height = result;
 one.style.backgroundColor = "rgb(255, 102,  102)";
 
-two.style.width = "8vw";
-two.style.height = "8vw";
+two.style.width = result;
+two.style.height = result;
 two.style.backgroundColor = "rgb(255, 102,  102)";
 
-three.style.width = "8vw";
-three.style.height = "8vw";
+three.style.width = result;
+three.style.height = result;
 three.style.backgroundColor = "rgb(255, 102,  102)";
 
 </script>
