@@ -33,11 +33,14 @@ const bigdiv = root.children[0];
 const right = root.children[1];
 
 const text = right.children[0];
-const section = right.children[1];
-const smalldiv = section.children[0,1,2];
-
 const h1 = text.children[0];
 const p = text.children[1];
+
+const section = right.children[1];
+const smalldiv1 = section.children[0];
+const smalldiv2 = section.children[1];
+const smalldiv3 = section.children[2];
+
 
 const result = 25%3;
 
@@ -71,15 +74,21 @@ h1.style.fontWeight = "lighter";
 p.style.color = "rgb(202, 74, 74)";
 
 section.style.width = "30vw";
-section.style.height = "result"+"vw";
+section.style.height = "8vw";
 section.style.display = "flex";
 section.style.justifyContent = "space-between";
 
-smalldiv.style.width = "result"+"vw";
-smalldiv.style.height = "result"+"vw";
-smalldiv.style.backgroundColor = "rgb(255, 102,  102)";
+smalldiv1.style.width = "8vw";
+smalldiv1.style.height = "8vw";
+smalldiv1.style.backgroundColor = "rgb(255, 102,  102)";
 
+smalldiv2.style.width = "8vw";
+smalldiv2.style.height = "8vw";
+smalldiv2.style.backgroundColor = "rgb(255, 102,  102)";
 
+smalldiv3.style.width = "8vw";
+smalldiv3.style.height = "8vw";
+smalldiv3.style.backgroundColor = "rgb(255, 102,  102)";
 
 </script>
 </html>
