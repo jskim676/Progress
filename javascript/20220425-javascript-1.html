@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+<script>
+  document.body.style.width = "100vw";
+  document.body.style.height = "100vw";
+  document.body.style.display = "flex";
+  document.body.style.justifyContent = "center";
+  document.body.style.alignItems = "center";
+
+  const root = document.getElementById("root");
+  root.style.width = "60vw";
+  root.style.height = "30vh";
+  root.style.border = "1px solid black";
+  root.style.display = "flex";
+  root.style.flexDirection = "row";
+
+  root.style.justifyContent = "space-around";
+  root.style.alignItems = "center";
+
+  const one = root.children[0];
+  const two = root.children[1];
+  const three = root.children[2];
+
+  one.style.width = "15vw";
+  one.style.height = "15vw";
+  one.style.backgroundColor = "#ccc";
+
+  two.style.width = "15vw";
+  two.style.height = "15vw";
+  two.style.backgroundColor = "#ccc";
+
+  three.style.width = "15vw";
+  three.style.height = "15vw";
+  three.style.backgroundColor = "#ccc";
+
+  root.addEventListener('click', function() {
+    root.style.width = "20vw";
+    root.style.height = "60vh";
+    root.style.flexDirection = "column";
+
+  });
+  
+
+
+</script>
+</html>
