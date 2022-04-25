@@ -30,7 +30,16 @@ document.body.style.padding = "0";
 
 const root = document.getElementById('root');
 const bigdiv = root.children[0];
-const 
+const right = root.children[1];
+
+const text = right.children[0];
+const section = right.children[1];
+const smalldiv = section.children[0,1,2];
+
+const h1 = text.children[0];
+const p = text.children[1];
+
+const result = 25%3;
 
 
 root.style.width = "100vw";
@@ -42,6 +51,34 @@ root.style.alignItems = "center";
 bigdiv.style.width = "25vw";
 bigdiv.style.height = "25vw";
 bigdiv.style.backgroundColor = "rgb(255, 102,  102)";
+
+right.style.width = "35vw";
+right.style.height = "25vw";
+right.style.display = "flex";
+right.style.flexDirection = "column";
+right.style.justifyContent = "space-between";
+right.style.alignItems = "center";
+
+text.style.width = "30vw";
+text.style.height = "14vw";
+
+h1.style.width = "30vw";
+h1.style.height = "5vw";
+h1.style.color = "rgb(202, 74, 74)";
+h1.style.fontSize = "50px";
+h1.style.fontWeight = "lighter";
+
+p.style.color = "rgb(202, 74, 74)";
+
+section.style.width = "30vw";
+section.style.height = "result"+"vw";
+section.style.display = "flex";
+section.style.justifyContent = "space-between";
+
+smalldiv.style.width = "result"+"vw";
+smalldiv.style.height = "result"+"vw";
+smalldiv.style.backgroundColor = "rgb(255, 102,  102)";
+
 
 
 </script>
