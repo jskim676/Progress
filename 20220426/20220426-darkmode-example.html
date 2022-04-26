@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button>Lunch</button>
+    <button>dinner</button>
+  </div>
+</body>
+<script>
+  // const test = document.querySelector('#root > button');
+
+  const root = document.getElementById('root');
+  const clickBtn1 = root.children[0];
+  const clickBtn2 = root.children[1];
+
+
+  console.dir(root);
+  console.log(clickBtn1);
+
+  let bgColorValue = 333;
+
+  root.style.width = "100vw";
+  root.style.height = "100vh";
+
+  let data = true;
+  clickBtn1.addEventListener('click', function() {
+      // console.log('hello');
+      // console.log(root.style.backgroundColor);
+
+      if(data === true) {
+        console.log('data 값은 :' + data);
+        data = false;
+        clickBtn1.textContent = "ramen";
+        root.style.backgroundImage = "url(https://t1.daumcdn.net/cfile/tistory/99881E495F1F67B61A)";
+        root.style.backgroundSize = "cover";
+        root.style.backgroundRepeat = "no-repeat";
+        
+        // root.style.backgroundColor = "#fff";
+        // root.style.transition = "2s";
+
+        
+      } else { //else의 영역 data !== true, data === false 
+        console.log("지금 else로 data 값은:" + data);
+        data = true;
+        clickBtn1.textContent = "lunch";
+        root.style.backgroundImage = "none";
+        // root.style.backgroundColor = `#${bgColorValue}`;
+        // root.style.transition = "2s";
+      }
+      
+  });
+
+clickBtn2.addEventListener('click', function() {
+      if(data === true) {
+        data = false;
+        clickBtn2.textContent = "chicken";
+        root.style.backgroundImage = "url(https://assets.epicurious.com/photos/5732526f1877f76a0e20831c/1:1/w_2560%2Cc_limit/EP_05102016_PeruvianStyleRoastChicken_recipe_.jpg";
+        root.style.backgroundSize = "cover";
+        root.style.backgroundRepeat = "no-repeat";
+
+      } else {
+        data = true;
+        clickBtn2.textContent = "dinner";
+        root.style.backgroundImage = "none";
+
+      }
+});
+
+
+</script>
+</html>
