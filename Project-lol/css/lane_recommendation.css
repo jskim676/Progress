@@ -1,20 +1,20 @@
 main {
   width: 95vw;
   height: inherit;
+  background-color: #071824;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #071824;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main > div {
@@ -101,7 +101,7 @@ main > div > div:nth-child(2) {
 
 main > div > div:nth-child(2) > div:nth-child(1) {
   width: 12vw;
-  height: 44vh;
+  height: 45vh;
   background-image: url(https://am-a.akamaihd.net/image?f=https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Kennen_0.jpg&resize=333:);
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@ main > div > div:nth-child(2) > div:nth-child(1) {
 
 main > div > div:nth-child(2) > div:nth-child(2) {
   width: 12vw;
-  height: 44vh;
+  height: 45vh;
   background-image: url(https://i.ibb.co/5hBr7hN/Skin-Loading-Screen-Classic-Viego.webp);
   background-size: cover;
   background-repeat: no-repeat;
@@ -117,7 +117,7 @@ main > div > div:nth-child(2) > div:nth-child(2) {
 
 main > div > div:nth-child(2) > div:nth-child(3) {
   width: 12vw;
-  height: 44vh;
+  height: 45vh;
   background-image: url(https://i.ibb.co/3SQnbcx/Skin-Loading-Screen-Classic-Ahri.webp);
   background-size: cover;
   background-repeat: no-repeat;
@@ -125,7 +125,7 @@ main > div > div:nth-child(2) > div:nth-child(3) {
 
 main > div > div:nth-child(2) > div:nth-child(4) {
   width: 12vw;
-  height: 44vh;
+  height: 45vh;
   background-image: url(https://i.ibb.co/Chwt9DH/Skin-Loading-Screen-Classic-Jinx.webp);
   background-size: cover;
   background-repeat: no-repeat;
@@ -133,7 +133,7 @@ main > div > div:nth-child(2) > div:nth-child(4) {
 
 main > div > div:nth-child(2) > div:nth-child(5) {
   width: 12vw;
-  height: 44vh;
+  height: 45vh;
   background-image: url(https://i.ibb.co/VSqNQYM/Skin-Loading-Screen-Classic-Thresh.webp);
   background-size: cover;
   background-repeat: no-repeat;

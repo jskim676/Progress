@@ -1,0 +1,52 @@
+
+  @mixin flex-setting ($a,$b) {
+    display:flex;
+    justify-content: $a;
+    align-items: $b;
+  }
+
+  main {
+    width:95vw;
+    height:inherit;
+    background-color:   #071824;
+
+    & > div:nth-child(1) {
+      width:inherit;
+      height:20vh;
+
+      @include flex-setting(center,center );
+
+      & > h1 {
+        color:#E0C568;
+      }
+    }
+
+    & > div:nth-child(2) {
+      width:inherit;
+      height:80vh;
+
+      display:flex;
+      
+      & > div:nth-child(1) {
+        width:50vw;
+        height:inherit;
+
+        @include flex-setting(center,center );
+
+      }
+
+      & > div:nth-child(2) {
+        width:45vw;
+        height:inherit;
+
+        @include flex-setting(center,center );
+
+        & > p {
+          width:20vw;
+          height:75vh;
+          color:#C4C4C4;
+          text-align: center;
+        }
+      }
+    }
+  }

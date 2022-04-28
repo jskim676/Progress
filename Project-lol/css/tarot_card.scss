@@ -1,0 +1,29 @@
+
+  @mixin flex-setting ($a,$b) {
+    display:flex;
+    justify-content: $a;
+    align-items: $b;
+  }
+
+  main {
+    width:95vw;
+    height:inherit;
+    background-color:   #071824;
+
+    @include flex-setting (center,center);
+    flex-direction: column;
+
+    & > #card {
+      width:80vw;
+      height:40vh;
+      
+      & > img {
+        margin-left:-4vw;
+
+      }
+
+      & > img:first-child{
+        margin:0;
+      }
+    }
+  }

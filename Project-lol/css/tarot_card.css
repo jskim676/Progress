@@ -1,0 +1,32 @@
+main {
+  width: 95vw;
+  height: inherit;
+  background-color: #071824;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main > #card {
+  width: 80vw;
+  height: 40vh;
+}
+
+main > #card > img {
+  margin-left: -4vw;
+}
+
+main > #card > img:first-child {
+  margin: 0;
+}
+/*# sourceMappingURL=tarot_card.css.map */

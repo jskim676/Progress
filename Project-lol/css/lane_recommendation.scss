@@ -8,11 +8,10 @@
   main {
     width:95vw;
     height:inherit;
-    display:flex;
-    flex-direction: column;
-    justify-content:  center;
-    align-items: center;
     background-color:   #071824;
+
+    @include flex-setting(center,center );
+    flex-direction: column;
 
     & > div {
       width:90vw;
@@ -79,7 +78,7 @@
 
         & > div:nth-child(1) {
           width:12vw;
-          height:44vh;
+          height:45vh;
           background-image: url(https://am-a.akamaihd.net/image?f=https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Kennen_0.jpg&resize=333:);
           background-size: cover;
           background-repeat: no-repeat;
@@ -87,7 +86,7 @@
 
         & > div:nth-child(2) {
           width:12vw;
-          height:44vh;
+          height:45vh;
           background-image: url(https://i.ibb.co/5hBr7hN/Skin-Loading-Screen-Classic-Viego.webp);
           background-size: cover;
           background-repeat: no-repeat;
@@ -95,7 +94,7 @@
 
         & > div:nth-child(3) {
           width:12vw;
-          height:44vh;
+          height:45vh;
           background-image: url(https://i.ibb.co/3SQnbcx/Skin-Loading-Screen-Classic-Ahri.webp);
           background-size: cover;
           background-repeat: no-repeat;
@@ -103,7 +102,7 @@
         
         & > div:nth-child(4) {
           width:12vw;
-          height:44vh;
+          height:45vh;
           background-image: url(https://i.ibb.co/Chwt9DH/Skin-Loading-Screen-Classic-Jinx.webp);
           background-size: cover;
           background-repeat: no-repeat;
@@ -111,7 +110,7 @@
         
         & > div:nth-child(5) {
           width:12vw;
-          height:44vh;
+          height:45vh;
           background-image: url(https://i.ibb.co/VSqNQYM/Skin-Loading-Screen-Classic-Thresh.webp);
           background-size: cover;
           background-repeat: no-repeat;
