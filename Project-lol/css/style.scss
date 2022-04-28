@@ -1,0 +1,71 @@
+  *{margin:0; padding:0; box-sizing: border-box;}
+
+  @mixin flex-setting ($a,$b) {
+    display:flex;
+    justify-content: $a;
+    align-items: $b;
+  }
+
+  #root {
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+
+    & > nav {
+      width:5vw;
+      height:inherit;
+      background-color: #ebebeb;
+      
+      @include flex-setting(flex-start,center );
+      flex-direction: column;
+
+      & > div:nth-child(1) {
+        width:inherit;
+        height:5vh;
+      }
+
+      & > div:nth-child(2) {
+        width:inherit;
+        height:70vh;
+
+        @include flex-setting(space-between,center );
+        flex-direction: column;
+
+
+        & > div {
+          width:2.5vw;
+          height:2.5vw;
+
+        }
+        & > div:nth-child(1) {
+          border-radius: 50%;
+          background-color: #c4c4c4;
+        }
+
+        & > div:nth-child(2) {
+          background-image:url(https://icons.veryicon.com/png/o/miscellaneous/linear-icon-25/bulletin-board-4.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        
+        & > div:nth-child(3) {
+          background-image:url(https://cdn-icons-png.flaticon.com/512/5705/5705144.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        & > div:nth-child(4) {
+          background-image:url(https://cdn-icons-png.flaticon.com/512/4298/4298168.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        
+        & > div:nth-child(5) {
+          background-image:url(https://cdn-icons-png.flaticon.com/512/815/815844.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }

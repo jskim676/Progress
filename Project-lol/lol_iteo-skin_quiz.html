@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+  
+  .flex-setting {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section {
+    width:12vw;
+    height:100vh;
+    background-color:#b4b4b4;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  section > .bar {
+    width:inherit;
+    height:24vh;
+    display:flex;
+    flex-direction: column;
+  }
+  
+  section > .bar > div {
+    width:10vw;
+    height:6vh;
+  }
+
+  section > .bar > div:nth-child(1) {
+    width:11vw;
+    height:8vh;
+    border:0;
+  }
+
+  section > .bar > div:nth-child(1) > div:nth-child(1) {
+    width:inherit;
+    height:5vh;
+    display:flex;
+    align-items: center;
+  }
+
+  section > .bar > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+    width:inherit;
+    height:2vh;
+    border-radius: 1vw;
+    background-color:#ebebeb;
+  }
+
+  section > .bar > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+    width:10vw;
+    height:2vh;
+    border-radius: 1vw;
+    background-color: #333;
+    position:absolute;
+  }
+
+  section > .bar > div:nth-child(1) > div:nth-child(2) {
+    display:flex;
+    justify-content: flex-end;
+  }
+  
+  section > .bar > div:nth-child(2) > div:nth-child(1) {
+    width:inherit;
+    height:3vh;
+    display:flex;
+    align-items: center;
+  }
+
+  section > .bar > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+    width:inherit;
+    height:1vh;
+    border-radius: 1vw;
+    background-color: #ebebeb;
+  }
+
+  section > .bar > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+    width:5vw;
+    height:1vh;
+    border-radius: 1vw;
+    background-color: #FC6264;
+    position: absolute;
+  }
+
+  section > .bar > div:nth-child(2) > div:nth-child(2) {
+    display:flex;
+    justify-content: flex-end;
+    color:#FC6264;
+  }
+
+  section > .bar > div:nth-child(3) > div:nth-child(1) {
+    width:inherit;
+    height:3vh;
+    display:flex;
+    align-items: center;
+  }
+
+  section > .bar > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) {
+    width:inherit;
+    height:1vh;
+    border-radius: 1vw;
+    background-color: #ebebeb;
+  }
+
+  section > .bar > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) {
+    width:7vw;
+    height:1vh;
+    border-radius: 1vw;
+    background-color: #62A9F9;
+    position: absolute;
+  }
+
+  section > .bar > div:nth-child(3) > div:nth-child(2) {
+    display:flex;
+    justify-content: flex-end;
+    color:#62A9F9;
+  }
+
+  section > div:nth-child(2) {
+    width:inherit;
+    height:4vh;
+    display:flex;
+    justify-content: flex-end;
+  }
+  
+  section > div:nth-child(2) > div {
+    width:5vw;
+    height:3vh;
+    border:2px solid #333;
+    border-radius: 2vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:1vw;
+  }
+
+  section > div:nth-child(3) {
+    width:inherit;
+    height:63vh;
+  }
+
+  section > div:nth-child(3) > div:nth-child(1) {
+    width:inherit;
+    height:30vh;
+    display:flex;
+    flex-direction: column;
+  }
+
+  section > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) {
+    width:6vw;
+    height:4vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #FC6264;
+    margin-left:1vw;
+  }
+
+  section > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) {
+    width:inherit;
+    height:25vh;
+    display:flex;
+    flex-direction: column;
+  }
+  
+  section > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div {
+    width:11vw;
+    height:5vh;
+    display:flex;
+    align-items: center;
+    margin-left:1vw;
+  }
+
+
+
+  section > div:nth-child(3) > div:nth-child(2) {
+    width:12vw;
+    height:30vh;
+    display:flex;
+    flex-direction: column;
+  }
+
+  section > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) {
+    width:6vw;
+    height:4vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #62A9F9;
+    margin-left:1vw;
+  }
+
+  section > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) {
+    width:inherit;
+    height:25vh;
+    display:flex;
+    flex-direction: column;
+  }
+  
+  section > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div {
+    width:11vw;
+    height:5vh;
+    display:flex;
+    align-items: center;
+    margin-left:1vw;
+  }
+
+  section > div:nth-child(4) {
+    width:inherit;
+    height:5vh;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  section > div:nth-child(4) > div {
+    width:8vw;
+    height:5vh;
+    background-color: #c4c4c4;
+    display:Flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:1vw;
+  }
+
+  main {
+    width:83vw;
+    height:inherit;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main > div:nth-child(1) {
+    width:inherit;
+    height:5vh;
+    background-color: #b4b4b4;
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+  }
+
+  main > div:nth-child(1) > div {
+    width:2vw;
+    height:2vw;
+    background-image: url(https://i.ibb.co/dGS2yVV/Group-8.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right:1vw;
+  }
+
+  main > div:nth-child(2) {
+    width:52vw;
+    height:60vh;
+    background-image:url(https://i.ibb.co/VtxCZ21/image-30-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  main > div:nth-child(3) {
+    width:inherit;
+    height:28vh;
+    border-radius: 10px 10px 0 0;
+    border:1px solid #c8c8c8;
+  }
+  
+  main > div:nth-child(4) {
+    width:inherit;
+    height:7vh;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border:1px solid #c8c8c8;
+  }
+
+  main > div:nth-child(4) > div:nth-child(1) {
+    width:3vw;
+    height:6vh;
+    border-radius: 10px;
+    border:1px solid #c8c8c8;
+    font-size: 30px;
+    color:#c8c8c8;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  main > div:nth-child(4) > div:nth-child(2) {
+    width:70vw;
+    height:6vh;
+    border:1px solid #c8c8c8;
+    border-radius: 10px;
+  }
+
+  main > div:nth-child(4) > div:nth-child(3) {
+    width:7vw;
+    height:6vh;
+    border-radius:10px;
+    border:1px solid #c8c8c8;
+  }
+
+</style>
+<body>
+  <div id="root">
+    <nav>
+      <div></div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    <section>
+      <div class="bar flex-setting" >
+        <div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>1:50</div>
+        </div>
+        <div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>4/9</div>
+        </div>
+        <div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>5/9</div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div>
+        <div>Play</div>
+      </div>
+      <!-- 3 -->
+      <div>
+        <div>
+          <div>A Team</div>
+          <div>
+            <div>1. ~</div>
+            <div>2. ~</div>
+            <div>3. ~</div>
+            <div>4. ~</div>
+            <div>5. ~</div>
+          </div>
+        </div>
+        <div>
+          <div>B Team</div>
+          <div>
+            <div>1. ~</div>
+            <div>2. ~</div>
+            <div>3. ~</div>
+            <div>4. ~</div>
+            <div>5. ~</div>
+          </div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div>
+        <div>CODE : AAAAAA</div>
+      </div>
+    </section>
+    <main>
+      <div>
+        <div></div>
+      </div>
+      <div></div>
+      <div></div>
+      <div>
+        <div>+</div>
+        <div></div>
+        <div></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

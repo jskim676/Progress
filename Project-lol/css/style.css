@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#root > nav {
+  width: 5vw;
+  height: inherit;
+  background-color: #ebebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root > nav > div:nth-child(1) {
+  width: inherit;
+  height: 5vh;
+}
+
+#root > nav > div:nth-child(2) {
+  width: inherit;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root > nav > div:nth-child(2) > div {
+  width: 2.5vw;
+  height: 2.5vw;
+}
+
+#root > nav > div:nth-child(2) > div:nth-child(1) {
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+
+#root > nav > div:nth-child(2) > div:nth-child(2) {
+  background-image: url(https://icons.veryicon.com/png/o/miscellaneous/linear-icon-25/bulletin-board-4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#root > nav > div:nth-child(2) > div:nth-child(3) {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/5705/5705144.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#root > nav > div:nth-child(2) > div:nth-child(4) {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/4298/4298168.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#root > nav > div:nth-child(2) > div:nth-child(5) {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/815/815844.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=style.css.map */

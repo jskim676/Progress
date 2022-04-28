@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div class="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</body>
+<script>
+  const root = document.getElementById('root');
+  const container = root.children[0];
+
+  const hundred = 100;
+  root.style.width = `${hundred}vw`;
+  root.style.height = `${hundred}vh`;
+  root.style.display = "flex";
+  root.style.justifyContent = "center";
+  root.style.alignItems = "center";
+
+  console.log(container);
+  console.dir(container);
+
+  container.style.width = `${hundred/2.5}vw`;
+  container.style.height = `${hundred/2.5}vw`;
+  container.style.border = "1px solid black";
+
+ 
+  
+
+  const zIndexValue = container.children.length;
+  console.log()
+
+  container[0].addEventListener('click', function() {
+    container[0].style.zIndex = zIndexValue;
+    container[1].style.zIndex = `${zIndexValue-1}`;
+  })
+
+  B.addEventListener('click', function() {
+    A.style.zIndex = `${zIndexValue-1}`; 
+    B.style.zIndex = zIndexValue;
+  })
+
+
+
+</script>
+</html>

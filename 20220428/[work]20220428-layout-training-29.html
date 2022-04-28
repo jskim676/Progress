@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div class="container">
+      <div class="A"></div>
+      <div class="B"></div>
+    </div>
+  </div>
+</body>
+<script>
+  const root = document.getElementById('root');
+  const container = root.children[0];
+  const A = container.children[0];
+  const B = container.children[1];
+
+  const hundred = 100;
+  root.style.width = `${hundred}vw`;
+  root.style.height = `${hundred}vh`;
+  root.style.display = "flex";
+  root.style.justifyContent = "center";
+  root.style.alignItems = "center";
+
+  console.log(container);
+  console.dir(container);
+
+  container.style.width = `${hundred/2.5}vw`;
+  container.style.height = `${hundred/2.5}vw`;
+  container.style.border = "1px solid black";
+
+  A.style.width = `${hundred/4}vw`;
+  A.style.height = `${hundred/4}vw`;
+  A.style.backgroundColor = "#BEEFF2";
+  A.style.position = "relative";
+  A.style.left = `${hundred/20}vw`;
+  A.style.top = `${hundred/20}vw`;
+  A.style.zIndex = 1;
+
+  B.style.width = `${hundred/4}vw`;
+  B.style.height = `${hundred/4}vw`;
+  B.style.backgroundColor = "#305153";
+  B.style.position = "relative";
+  B.style.bottom = `${hundred/7}vw`;
+  B.style.left = `${hundred/10}vw`;
+  B.style.zIndex = 2;
+
+  
+
+  const zIndexValue = container.children.length;
+  
+
+  A.addEventListener('click', function() {
+    A.style.zIndex = zIndexValue;
+    B.style.zIndex = `${zIndexValue-1}`;
+  })
+
+  B.addEventListener('click', function() {
+    A.style.zIndex = `${zIndexValue-1}`; 
+    B.style.zIndex = zIndexValue;
+  })
+
+
+
+</script>
+</html>
