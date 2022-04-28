@@ -1,0 +1,38 @@
+main {
+  width: 95vw;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main > div:nth-child(1) {
+  width: 2vw;
+  height: 2vw;
+  background-image: url(https://i.ibb.co/dGS2yVV/Group-8.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 1vw;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+}
+
+main > div:nth-child(2) {
+  width: 85vw;
+  height: 87vh;
+  background-image: url(https://i.ibb.co/4RKrPQB/Group-15.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=puzzle.css.map */

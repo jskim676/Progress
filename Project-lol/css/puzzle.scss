@@ -1,0 +1,28 @@
+  main {
+    width:95vw;
+    height:inherit;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > div:nth-child(1) {
+      width:2vw;
+      height:2vw;
+      background-image: url(https://i.ibb.co/dGS2yVV/Group-8.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-right:1vw;
+      position:absolute;
+      top:1vh;
+      right:1vw;
+    }
+
+    & > div:nth-child(2) {
+      width:85vw;
+      height:87vh;
+      background-image:url(https://i.ibb.co/4RKrPQB/Group-15.png);
+      background-size:cover;
+      background-repeat: no-repeat;
+    }
+  }
