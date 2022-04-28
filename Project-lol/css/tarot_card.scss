@@ -13,17 +13,22 @@
     @include flex-setting (center,center);
     flex-direction: column;
 
-    & > #card {
-      width:80vw;
-      height:40vh;
+    & > div:nth-child(1) {
+      width:inherit;
+      height:20vh;
       
-      & > img {
-        margin-left:-4vw;
+      @include flex-setting(center,center );
+      flex-direction: column;
 
+      & > h1 {
+        color : #E0C568;
       }
+    }
+    
+    & > div:nth-child(2) {
+      width:inherit;
+      height:80vh;
 
-      & > img:first-child{
-        margin:0;
-      }
+      @include flex-setting(center,center );
     }
   }

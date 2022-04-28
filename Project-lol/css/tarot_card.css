@@ -17,16 +17,39 @@ main {
           flex-direction: column;
 }
 
-main > #card {
-  width: 80vw;
-  height: 40vh;
+main > div:nth-child(1) {
+  width: inherit;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-main > #card > img {
-  margin-left: -4vw;
+main > div:nth-child(1) > h1 {
+  color: #E0C568;
 }
 
-main > #card > img:first-child {
-  margin: 0;
+main > div:nth-child(2) {
+  width: inherit;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=tarot_card.css.map */
