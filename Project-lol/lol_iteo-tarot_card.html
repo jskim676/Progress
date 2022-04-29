@@ -26,28 +26,28 @@
         <h1>2022.XX.XX Monday</h1>
       </div>
       <div id="card">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
-        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </main>
   </div>
@@ -55,11 +55,35 @@
 <script>
   const card = document.getElementById('card');
 // 카드가 중앙에 오지 않음
+
+
   for(let i = 0; i < card.children.length; i++) {
+    card.children[i].style.width = "5vw";
+    card.children[i].style.height = "16vh";
+    card.children[i].style.backgroundImage = "url(https://i.ibb.co/MRxWcN8/Card-11.png)";
+    card.children[i].style.backgroundSize = "cover";
+    card.children[i].style.backgroundRepeat = "no-repeat";
     card.children[i].style.position = "relative";
     card.children[i].style.zIndex = i;
-    card.children[i].style.left = `-${i*1.5}vw`;
+    card.children[i].style.left = `-${i/2}vw`;
+
+    // card.children[i].style.transform = `rotate(${i-11}deg)`;
+
+    // if (i <= 10) {
+    //   card.children[i].style.bottom = `${i/2}vh`;
+    // }
+
+    card.children[i].addEventListener('mouseover',function(){
+      card.children[i].style.bottom = "2vh";
+      card.children[i].style.zIndex = `${card.children.length}`;
+    }); 
+
+    card.children[i].addEventListener('mouseout',function(){
+      card.children[i].style.bottom = "0vh";
+      card.children[i].style.zIndex = i;
+    }); 
   };
+
 
 
   

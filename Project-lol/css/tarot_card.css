@@ -42,7 +42,6 @@ main > div:nth-child(1) > h1 {
 main > #card {
   width: 90vw;
   height: 80vh;
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

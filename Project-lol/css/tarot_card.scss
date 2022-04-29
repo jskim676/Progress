@@ -28,7 +28,6 @@
     & > #card {
       width:90vw;
       height:80vh;
-      border:1px solid red;
       @include flex-setting(flex-start,center );
     }
   }

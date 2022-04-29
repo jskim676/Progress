@@ -85,7 +85,7 @@
     </section>
     <main>
       <!-- 톱니바퀴 -->
-      <div>
+      <div id="cog">
         <div></div>
       </div>
       <!-- 문제 창 -->
@@ -150,7 +150,80 @@
         <div></div>
         <div></div>
       </div>
+            <!-- 설정창 -->
+            <div id="setting">
+              <div>
+                <div>난이도 :</div>
+                <div>
+                  <div>Easy</div>
+                  <div>Normal</div>
+                  <div>Hard</div>
+                  <div>Hell</div>
+                </div>
+              </div>
+              <div>
+                <div>게임 방식 :</div>
+                <div>
+                  <div>개인전</div>
+                  <div>팀전</div>
+                </div>
+              </div>
+              <div>
+                <div>인원 제한 :</div>
+                <div>
+                  <div></div>
+                  <div>
+                  </div>
+                </div>
+                <div>
+                  <div>2</div>
+                  <div>3</div>
+                  <div>4</div>
+                  <div>5</div>
+                  <div>6</div>
+                  <div>7</div>
+                  <div>8</div>
+                  <div>9</div>
+                  <div>10</div>
+                </div>
+              </div>
+              <div>
+                <div>승리 조건 :</div>
+                <div>
+                  <div>3</div>
+                  <div>5</div>
+                  <div>7</div>
+                  <div>9</div>
+                </div>
+              </div>
+              <div>
+                <div>시간 제한 :</div>
+                <div>
+                  <div>0:30</div>
+                  <div>1:00</div>
+                  <div>1:30</div>
+                  <div>2:00</div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
     </main>
   </div>
 </body>
+<script>
+const cog = document.getElementById('cog');
+const setting = document.getElementById('setting');
+
+let data = true;
+cog.addEventListener('click', function() {
+  if (data === true) {
+    data = false;
+    setting.style.display = "none";
+  } else { 
+    data = true;
+    setting.style.display = "flex";
+  }
+});
+</script>
 </html>
