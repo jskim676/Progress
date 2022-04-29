@@ -25,10 +25,10 @@
       }
     }
     
-    & > div:nth-child(2) {
-      width:inherit;
+    & > #card {
+      width:90vw;
       height:80vh;
-
-      @include flex-setting(center,center );
+      border:1px solid red;
+      @include flex-setting(flex-start,center );
     }
   }

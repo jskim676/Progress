@@ -39,15 +39,16 @@ main > div:nth-child(1) > h1 {
   color: #E0C568;
 }
 
-main > div:nth-child(2) {
-  width: inherit;
+main > #card {
+  width: 90vw;
   height: 80vh;
+  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

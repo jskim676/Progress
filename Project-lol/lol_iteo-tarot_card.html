@@ -25,20 +25,45 @@
         <h1>타로 카드로 보는 오늘의 운</h1>
         <h1>2022.XX.XX Monday</h1>
       </div>
-      <div>
-        <img src="https://i.ibb.co/BqHZB5q/Group-22.png" alt="타로카드">
+      <div id="card">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
+        <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="타로카드">
       </div>
     </main>
   </div>
 </body>
-<!-- <script>
-  const one = document.querySelector('#card');
-  const card = one.children;
+<script>
+  const card = document.getElementById('card');
+// 카드가 중앙에 오지 않음
+  for(let i = 0; i < card.children.length; i++) {
+    card.children[i].style.position = "relative";
+    card.children[i].style.zIndex = i;
+    card.children[i].style.left = `-${i*1.5}vw`;
+  };
 
-  for(let i = 0; i<card.length; i++) {
-    card[i].width = "10vw";
-    card[i].height = "20vh";
-  }
 
-</script> -->
+  
+  console.log(card);
+  console.log(card.children);
+</script>
 </html>
