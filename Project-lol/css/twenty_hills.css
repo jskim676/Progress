@@ -472,37 +472,63 @@ main > div:nth-child(5) > div {
           align-items: center;
 }
 
-main > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) {
+main > div:nth-child(5) > div:nth-child(1) {
   width: 16vw;
+  height: 12vh;
+  display: Flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) {
+  width: inherit;
   height: 2vh;
 }
 
 main > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) {
-  width: 17vw;
-  height: 4vh;
+  width: inherit;
+  height: 2vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-main > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div {
-  width: 4vw;
-  height: 4vh;
-  background-color: rgba(196, 196, 196, 0.2);
-  border-radius: 10px;
-  display: Flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+main > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+  width: 12vw;
+  height: 1vh;
+  border-radius: 10px;
+  background-color: rgba(196, 196, 196, 0.3);
+}
+
 main > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
-  background-color: rgba(196, 196, 196, 0.7);
+  width: 1.2vw;
+  height: 1.2vw;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  position: absolute;
+  right: 7.9vw;
+}
+
+main > div:nth-child(5) > div:nth-child(1) > div:nth-child(3) {
+  width: 11vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 0.5vw;
 }
 
 main > div:nth-child(5) > div:nth-child(2) {
@@ -592,7 +618,7 @@ main > div:nth-child(5) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2)
   border-radius: 50%;
   background-color: #c4c4c4;
   position: absolute;
-  right: 0.8vw;
+  right: 10.5vw;
 }
 
 main > div:nth-child(5) > div:nth-child(3) > div:nth-child(3) {
