@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<script>
+const root = document.getElementById('root');
+
+let status = true;
+let value = 0;
+
+root.textContent = value;
+console.log(root.textContent);
+
+root.addEventListener('click', function(){
+  if(status === true) {
+    value++;
+    console.log(value);
+    if(value >= 10) {
+      status = false;
+      console.log(status);
+    }
+    root.textContent = value;
+  } else {
+    value--;
+    console.log(value);
+    if(value <= 0 ) {
+      status = true;
+    }
+    root.textContent = value;
+  }
+});
+
+
+
+</script>
+</html>

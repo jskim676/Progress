@@ -1,0 +1,44 @@
+  *{margin:0; padding:0; box-sizing: border-box;}
+
+  @mixin flex-setting ($a,$b) {
+    display:flex;
+    justify-content: $a;
+    align-items: $b;
+  }
+
+  #root {
+    width:100vw;
+    height:100vh;
+
+    @include flex-setting(center,center );
+    
+    & > .circle {
+      width:40vw;
+      height:40vw;
+      border:1px solid #c4c4c4;
+      border-radius: 50%;
+      position:absolute;
+
+      & > div {
+        width:15vw;
+        height:15vw;
+        background-color: #c4c4c4;
+        border-radius: 5vw;
+        position:absolute;
+        top:25vh;
+        z-index:3;
+        transform:rotate(30deg);
+        box-shadow: 5vw -5vw 50px #c4c4c4;
+        }
+      
+    }
+
+    & > .hidden {
+      width:20vw;
+      height:100vh;
+      position:absolute;
+      left:20vw;
+      background-color: rgb(255, 255, 255);
+      z-index: 2;
+    }
+  }

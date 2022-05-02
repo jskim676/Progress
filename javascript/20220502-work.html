@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- <script>
+    
+    let a = "겜";
+    let b = "블";
+    let c = "러";
+    let originalData = "텀";
+    let text = originalData + b + c ;
+    const root = document.getElementById("root");
+    console.dir(root);
+    text = a + b + c ;
+    root.textContent = text;
+    console.log(text[0]);
+
+
+  </script>
+   -->
+  
+  <script>
+
+    const root = document.getElementById("root");
+    let innerValue = "나는 지금 코딩하고 있다";
+    root.textContent = innerValue;
+
+    // let current = 0;
+    // root.addEventListener('click', function() {
+    //   if(current === 1) {
+    //     current = 0;
+    //     root.innerHTML = "코딩이 나를 하고 있나";
+    //     root.style.color = "#000";
+    //     root.style.backgroundColor = "red";
+
+
+    //   } else {
+    //     current = 1;
+    //     root.innerHTML = "나는 지금 코딩을 하고있나";
+    //     root.style.color = "#000";
+    //     root.style.backgroundColor = "salmon";
+    //   }
+    // });
+    
+    let current = 0;
+    root.addEventListener('click', function() {
+      if(current < 30) {
+        current++;
+        root.textContent = current;
+        console.log(current);
+      } else {
+        current--;
+        console.log(current);
+      }
+
+    })
+
+  </script>
+</body>
+</html>
