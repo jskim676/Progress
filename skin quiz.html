@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <img src="https://w.namu.la/s/552182b17b7308c8cfb7fc70a7d67daa7dc73b9ff6a9f949e4492583ef186a7c62b950b01ac552627cca010a48a1e2cf7bfee1b253b4861a330652cc2bb546342a25c319aa089c25470e851c3c4da2e5605d7537af173f16e9ee67fe0442e82eaf73dbe916e08a37a61c8971b9dc804a" alt="스킨">
+    <img src="https://w.namu.la/s/552182b17b7308c8cfb7fc70a7d67daa7dc73b9ff6a9f949e4492583ef186a7c62b950b01ac552627cca010a48a1e2cf7bfee1b253b4861a330652cc2bb546342a25c319aa089c25470e851c3c4da2e5605d7537af173f16e9ee67fe0442e82eaf73dbe916e08a37a61c8971b9dc804a" alt="스킨">
+    <div class="box"></div>
+  </div>
+</body>
+<script>
+  function sizeSet (target, width, height) {
+    target.style.width = width;
+    target.style.height = height;
+  }
+  document.body.style.margin = 0;
+  document.body.style.padding = 0;
+
+  const root = document.getElementById('root');
+  const img = root.children[0];
+  const original = root.children[1];
+  const div = root.children[2];
+  let number = (Math.floor(Math.random()*81));
+  let number2 = (Math.floor(Math.random()*61));
+
+  sizeSet(original, "100vw", "100vh");
+  original.style.position = "absolute";
+  original.style.zIndex = 1;
+  
+  sizeSet(div, "100vw", "100vh");
+  div.style.position = "absolute";
+  div.style.backdropFilter = "blur(30px)"
+  div.style.zIndex = 2;
+  
+  img.style.width = "100vw";
+  img.style.height = "100vh";
+  img.style.position = "absolute";
+  img.style.clip = "rect(0 100px 100px 0)";
+  img.style.zIndex = 3;
+
+
+</script>
+</html>

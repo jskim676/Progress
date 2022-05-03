@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button id="button">배경색 전환</button>
+    <div></div>
+  </div>
+</body>
+<script>
+const root = document.getElementById('root');
+const btn = document.getElementById('button');
+const div = root.children[1];
+
+console.log(btn);
+
+document.body.style.margin = 0;
+document.body.style.padding = 0;
+
+const color = ["red", "blue", "salmon", "black", "green", "yellow", "lightgreen"];
+
+
+root.style.width = "100vw";
+root.style.height = "100vh";
+root.style.backgroundColor = color[Math.floor(Math.random()*7)];
+
+btn.style.width = "5vw"
+btn.style.height = "3vh";
+btn.style.position = "absolute"
+
+console.log(color[Math.floor(Math.random()*7)]);
+
+let data = true;
+btn.addEventListener("click",function() {
+  const number = Math.floor(Math.random()*96);
+  const number2 = Math.floor(Math.random()*98);
+  if(data === true) {
+    data = false;
+    root.style.backgroundColor = color[Math.floor(Math.random()*7)];
+    btn.style.position = "absolute"
+    btn.style.left = `${number}vw`;
+    btn.style.top = `${number2}vh`;
+  } else {
+    data = true;
+    root.style.backgroundColor = color[Math.floor(Math.random()*7)];
+    btn.style.position = "absolute"
+    btn.style.left = `${number}vw`;
+    btn.style.top = `${number2}vh`;
+  }
+  console.log(btn.style.left);
+  console.log(btn.style.top);
+});
+
+</script>
+</html>

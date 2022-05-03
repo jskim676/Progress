@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width:100vw;
+      height:100vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div:nth-child(1) {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div:nth-child(1) > div {
+      font-size: 50px;
+      overflow: hidden;
+    }
+
+    #root > div:nth-child(1) > div:nth-child(3) {
+      transform: rotate(180deg);
+    }
+
+    #root > div:nth-child(1) > div:nth-child(10) > div:nth-child(1) {
+      position:relative;
+      top:3vh;
+    }
+
+    #root > div:nth-child(1) > div:nth-child(10) > div:nth-child(2) {
+      position:relative;
+      bottom:6vh;
+      
+    }
+
+    #root > div:nth-child(1) > div:nth-child(11) {
+      transform:rotate(180deg);
+    }
+
+    #root > div:nth-child(1) > div:nth-child(13) {
+      transform:rotate(180deg);
+    }
+
+    #root > .top {
+      width:100vw;
+      height:20vh;
+      background-color:white;
+      position:absolute;
+      top:25.3vh;
+    }
+
+    #root > .bottom {
+      width:100vw;
+      height:20vh;
+      background-color:white;
+      position:absolute;
+      bottom:28vh;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>
+      <div>W</div>
+      <div>H</div>
+      <div>A</div>
+      <div>T</div>
+      <div>E</div>
+      <div>V</div>
+      <div>E</div>
+      <div>R</div>
+      <div>Y</div>
+      <div>
+        <div>O</div>
+        <div>O</div>
+      </div>
+      <div>U</div>
+      <div>W</div>
+      <div>A</div>
+      <div>N</div>
+      <div>T</div>
+    </div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1>Lorem Ipsum</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi rerum tenetur unde, enim molestiae iusto deserunt quis magni fuga porro qui nihil, libero nobis ea odit distinctio assumenda voluptatem quidem harum. Quaerat esse itaque cumque ipsum ullam earum quo eligendi pariatur, unde totam praesentium veritatis inventore rem tenetur? Esse in obcaecati optio autem, consequatur perferendis doloribus aspernatur id, totam facere deserunt omnis architecto qui ratione earum assumenda aut dolorem fugiat a voluptates dignissimos numquam, beatae consequuntur? A vitae voluptatum doloribus, velit sint amet iusto rerum! Ab illo impedit necessitatibus natus, architecto accusamus accusantium, nobis porro quo delectus rem laborum quidem aperiam, autem sunt eum veniam corporis dolor doloremque? Assumenda repellat iste harum necessitatibus maxime, ea rerum iusto eum id quod odit ducimus molestias dolorum, similique delectus est laboriosam consequuntur tempore. Quaerat fugiat alias, veritatis magni iste animi mollitia totam incidunt unde illo blanditiis necessitatibus ducimus cumque distinctio ullam quia inventore!</p>
+    <div>
+      <button id="normal">일반모드</button>
+      <button id="dark">다크모드</button>
+    </div>
+  </div>
+</body>
+<script>
+  function sizeSet (target, width, height) {
+    target.style.width = width;
+    target.style.height = height;
+  }
+
+  function flexSet (target, flexDirection, justifyContent, alignItems) {
+    target.style.display = "flex";
+    target.style.flexDirection = flexDirection;
+    target.style.justifyContent = justifyContent;
+    target.style.alignItems = alignItems;
+  }
+
+  document.body.style.margin = 0;
+  document.body.style.padding = 0;
+  document.body.style.boxSizing = "border-box";
+
+  const root = document.getElementById('root');
+  const h1 = root.children[0];
+  const p = root.children[1];
+  const box = root.children[2];
+  const btnN = document.getElementById('normal');
+  const btnD = document.getElementById('dark');
+
+
+  sizeSet(root, "100vw", "100vh");
+  flexSet(root, "column", "center", "center");
+
+
+  console.log(root);
+
+  h1.style.fontSize = "50px";
+  h1.style.color = "#333";
+
+  console.log(h1);
+  sizeSet(p, "40vw", "30vh");
+  p.style.textAlign = "center";
+  p.style.color = "#333";
+  
+  sizeSet(box,"8vw", "3vh")
+  flexSet(box, "row", "space-between", "center");
+
+  btnD.addEventListener('click', function() {
+    root.style.backgroundColor = "#333";
+    root.style.transition = "1s";
+    h1.style.color = "white";
+    h1.style.transition = "1s";
+    p.style.color = "white";
+    p.style.transition = "1s";
+  });
+
+  btnN.addEventListener('click', function() {
+    root.style.backgroundColor = "#fff";
+    root.style.transition = "1s";
+    h1.style.color = "#333";
+    h1.style.transition = "1s";
+    p.style.color = "#333";
+    p.style.transition = "1s";
+  });
+
+</script>
+</html>

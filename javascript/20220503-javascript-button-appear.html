@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+  </div>
+</body>
+<script>
+  function sizeSet (target, width, height) {
+    target.style.width = width;
+    target.style.height = height;
+  }
+  
+  function flexSet (target, flexDirection, justifyContent, alignItems) {
+    target.style.display = "flex";
+    target.style.flexDirection = flexDirection;
+    target.style.justifyContent = justifyContent;
+    target.style.alignItems = alignItems;
+  }
+  
+  document.body.style.margin = 0;
+  document.body.style.padding = 0;
+  document.body.style.boxSizing = "border-box";
+  
+  
+  const root = document.getElementById('root');
+  const btn = document.createElement('button');
+  const h1 = document.createElement('h1');
+  
+  const practics = ["피카츄", "라이츄", "파이리", "꼬부기", "버터풀", "야도란", "피죤투", "또가스"];
+  const color = ["rgb(254, 207, 70)", "rgb(237, 137, 50)", "rgb(244, 121, 51)", "rgb(166, 214, 214)", "rgb(154, 140, 191)", "rgb(236, 140, 139)", "rgb(253, 245, 209)", "rgb(173, 145, 175)" ]
+  
+  sizeSet(root, "100vw", "100vh");
+  flexSet(root, "column", "center" , "center");
+  root.appendChild(h1);
+  root.appendChild(btn);
+  
+  
+  sizeSet(btn, "4vw", "3vh"); 
+  btn.textContent = "포켓몬"
+
+  let count = 0;
+  h1.textContent = "Pokemon";
+  btn.addEventListener('click', function() {
+    
+    if (count <= 7) {
+      h1.style.color = color[count];
+      h1.textContent = practics[count];
+      console.log(h1);
+      h1.style.transition = "0.3s";
+      count++;
+    } else {
+      h1.textContent = "포켓몬스터를 다모았다";
+      h1.style.color = "rgb(0, 0, 0)";
+    }
+
+  });
+
+
+
+</script>
+</html>
