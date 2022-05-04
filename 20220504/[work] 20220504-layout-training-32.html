@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <nav>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    <main>
+      <div></div>
+      <div></div>
+      <div></div>
+    </main>
+    <section></section>
+  </div>
+</body>
+<script>
+  document.body.style.margin = 0;
+  document.body.style.padding = 0;
+
+
+  const root = document.getElementById('root');
+  const nav = document.querySelector('#root > nav');
+  console.log(nav);
+
+  const main = root.children[1];
+  const section = root.children[2];
+
+  function sizeSet (target, width, height) {
+    target.style.width = width;
+    target.style.height = height;
+  }
+
+  function flexSet (target, flexDirection, justifyContent, alignItems) {
+    target.style.display = "flex";
+    target.style.flexDirection = flexDirection;
+    target.style.justifyContent = justifyContent;
+    target.style.alignItems = alignItems;
+  }
+
+  sizeSet(root, "100vw" , "100vh");
+  flexSet(root, "row", "center", "center");
+
+  sizeSet(nav, "6vw", "100vh");
+  flexSet(nav, "column", "flex-start", "center");
+  nav.style.backgroundColor = "#c4c4c4";
+  const ctr = nav.children[0];
+
+  sizeSet(ctr, "4vw", "80vh");
+  flexSet(ctr, "column", "space-around", "center");
+  
+  const menu = ctr.children;
+  console.log(menu);
+  for(let i=0; i<menu.length; i++) {
+    sizeSet (menu[i], "4vw", "4vw");
+    menu[i].style.backgroundColor = "#4f4f4f";
+  };
+
+  sizeSet(main, "94vw", "100vh");
+  flexSet(main, "row", "center", "center");
+  const one = main.children[0];
+  const two = main.children[1];
+  const three = main.children[2];
+
+  let width = `${94/3}vw`;
+  console.log(width);
+
+  for(let i=0; i<main.children.length; i++) {
+    sizeSet(main.children[i], width, "100vh");
+  }
+  
+  one.style.backgroundColor = "#AFAFAF";
+  two.style.backgroundColor = "#757575";
+  three.style.backgroundColor = "#4f4f4f";
+  
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
+  const p3 = document.createElement('p');
+
+  one.appendChild(p1);
+  two.appendChild(p2);
+  three.appendChild(p3);
+
+  flexSet(one, "row", "center", "flex-start");
+  flexSet(two, "row", "center", "center");
+  flexSet(three, "row", "center", "flex-end");
+
+  p1.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit deleniti est aspernatur perferendis. Cumque quos numquam suscipit cum? Similique voluptates quis minus ducimus doloribus perferendis ipsa voluptate necessitatibus dolorem, molestias dolore accusantium ratione fuga ut dolor temporibus! Nemo tempore, numquam possimus tempora maxime corrupti velit. Cum nihil a sint!";
+  p1.style.padding = "2vw";
+
+  p2.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit deleniti est aspernatur perferendis. Cumque quos numquam suscipit cum? Similique voluptates quis minus ducimus doloribus perferendis ipsa voluptate necessitatibus dolorem, molestias dolore accusantium ratione fuga ut dolor temporibus! Nemo tempore, numquam possimus tempora maxime corrupti velit. Cum nihil a sint!";
+  p2.style.color = "#c4c4c4";
+  p2.style.padding = "2vw";
+  
+  p3.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit deleniti est aspernatur perferendis. Cumque quos numquam suscipit cum? Similique voluptates quis minus ducimus doloribus perferendis ipsa voluptate necessitatibus dolorem, molestias dolore accusantium ratione fuga ut dolor temporibus! Nemo tempore, numquam possimus tempora maxime corrupti velit. Cum nihil a sint!";
+
+  p3.style.color = "#c4c4c4";
+  p3.style.padding = "2vw";
+
+  sizeSet(section, "50vw", "40vh");
+  flexSet(section, "row", "center", "center");
+  section.style.backgroundColor = "rgba(51,51,51,0.9)";
+  section.style.borderRadius = "5vw";
+  section.style.transform = "rotate(15deg)";
+  section.style.boxShadow = "2vw 5vw 10px 10px #333";
+  section.style.position = "absolute";
+
+  const h1 = document.createElement('h1');
+  section.appendChild(h1);
+  console.log(h1);
+  h1.textContent = "BIGFONT";
+  h1.style.transform = "rotate(-15deg)";
+  h1.style.fontSize = "100px";
+  h1.style.color = "#fff";
+
+
+</script>
+</html>
