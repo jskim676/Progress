@@ -7,6 +7,7 @@
   <title>Document</title>
 </head>
 <body>
+  <h1 id="alarm">따르릉</h1>
   <button id="start">Start</button>
   <button id="end">End</button>
 </body>
@@ -14,29 +15,41 @@
   document.body.style.margin = 0;
   document.body.style.padding = 0;
 
+  const alarm = document.querySelector('h1');
   const start = document.getElementById('start');
   const end = document.getElementById('end');
+  console.dir(alarm);
+
 
   let text = ["똑", "딱"];
 
+
+
   let data = true;
+  let current = 0;
   start.addEventListener('click', function(){
 
     let timer = setInterval(function(){
       if(data === true) {
+        alarm.textContent = text[0];
         console.log(text[0]);
         data = false;
       } else {
+        alarm.textContent = text[1];
         console.log(text[1]);
         data = true;
+        current++;
+        console.log(current);
+        alarm.style.margin = `${current}px`;
       }
-    },1000);
+    },10);
 
     end.addEventListener('click',function() {
       clearInterval(timer);
     });
-    
+
   });
+
 
 
 </script>

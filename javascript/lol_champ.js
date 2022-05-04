@@ -10,10 +10,8 @@ const categories = {
   support : ["블리츠크랭크", "노틸러스", "파이크", "유미", "레나타글라스크", "카르마", "룰루", "세나", "레오나", "나미", "제라스", "알리스타", "라칸", "소라카", "샤코", "모르가나", "럭스", "쓰레쉬", "렐", "질리언", "마오카이", "탈리야", "자이라", "탐켄치", "소나", "브라움", "니코", "애니비아", "브랜드", "신드라", "바드", "뽀삐", "타릭", "잔나", "자크", "벨코즈", "하이머딩거", "판테온", "베이가", "세트", "애쉬", "세라핀", "스웨인", "갈리오", "아무무", "그라가스", "쉔"],
 }
 
-const answer = "제드"
 const yes = true
 const no = false
-
 
 
 // const rand = Math.floor(Math.random()*lolchamp.length);
@@ -22,67 +20,6 @@ const no = false
 
 // console.log(lolchamp[Math.floor(Math.random()*lolchamp.length)]);
 
-console.log("이번에 하실 챔피언은 탑 " + categories.top[Math.floor(Math.random()*categories.top.length)] + "입니다");
-
-console.log("이번에 하실 챔피언은 정글 " + categories.jungle[Math.floor(Math.random()*categories.jungle.length)] + "입니다");
-
-console.log("이번에 하실 챔피언은 미드 " + categories.middle[Math.floor(Math.random()*categories.middle.length)] + "입니다");
-
-console.log("이번에 하실 챔피언은 원딜 " + categories.bottom[Math.floor(Math.random()*categories.bottom.length)] + "입니다");
-
-console.log("이번에 하실 챔피언은 서포터 " + categories.support[Math.floor(Math.random()*categories.support.length)] + "입니다");
-
-
-// console.log(categories.yordle.includes(answer));
-
-
-// console.log(categories.top.includes(answer))
-// console.log(categories.jungle.includes(answer))
-// console.log(categories.middle.includes(answer))
-// console.log(categories.bottom.includes(answer))
-// console.log(categories.support.includes(answer))
-
-
-
-// if (categories.top.includes(answer)) {
-//   console.log(`${answer}라는 챔피언은 탑에 갑니다`)
-// } else {
-//   console.log(`${answer}라는 챔피언은 탑에 가지 않습니다`)
-// }
-
-// if (categories.jungle.includes(answer)) {
-//   console.log(`${answer}라는 챔피언은 정글에 갑니다`)
-// } else {
-//   console.log(`${answer}라는 챔피언은 정글에 가지 않습니다`)
-// }
-
-// if (categories.middle.includes(answer)) {
-//   console.log(`${answer}라는 챔피언은 미드에 갑니다`)
-// } else {
-//   console.log(`${answer}라는 챔피언은 미드에 가지 않습니다`)
-// }
-
-// if (categories.bottom.includes(answer)) {
-//   console.log(`${answer}라는 챔피언은 바텀에 갑니다`)
-// } else {
-//   console.log(`${answer}라는 챔피언은 바텀에 가지 않습니다`)
-// }
-
-// if (categories.support.includes(answer)) {
-//   console.log(`${answer}라는 챔피언은 서폿에 갑니다`)
-// } else {
-//   console.log(`${answer}라는 챔피언은 서폿에 가지 않습니다`)
-// }
-
-
-// const rand1 = Math.random();
-// console.log(rand1);
-
-// const rand2 = Math.floor(Math.random());
-// console.log(rand2);
-
-// const rand3 = Math.floor(Math.random()*10);
-// console.log(rand3);
 
 
 
@@ -91,11 +28,33 @@ console.log("이번에 하실 챔피언은 서포터 " + categories.support[Math
 
 
 
-// console.log(categories);
+// console.log("이번에 하실 챔피언은 탑 " + categories.top[Math.floor(Math.random()*categories.top.length)] + "입니다");
+
+// console.log("이번에 하실 챔피언은 정글 " + categories.jungle[Math.floor(Math.random()*categories.jungle.length)] + "입니다");
+
+// console.log("이번에 하실 챔피언은 미드 " + categories.middle[Math.floor(Math.random()*categories.middle.length)] + "입니다");
+
+// console.log("이번에 하실 챔피언은 원딜 " + categories.bottom[Math.floor(Math.random()*categories.bottom.length)] + "입니다");
+
+// console.log("이번에 하실 챔피언은 서포터 " + categories.support[Math.floor(Math.random()*categories.support.length)] + "입니다");
 
 
 
-// const junsick = ["나르","럼블"];
-// junsick.push("yordle");
 
-// console.log(junsick);
+
+
+
+
+
+
+let count = 0;
+let data = true;
+let timer = setInterval(function() {
+
+  if(count<lolchamp.length) {
+    console.log(lolchamp[count]);
+    count++;
+  } else {
+    count = 0;
+  }
+},1);

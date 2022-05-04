@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+    <img src="https://i.ibb.co/MRxWcN8/Card-11.png" alt="카드">
+  </div>
+</body>
+<script>
+  document.body.style.margin = 0;
+  document.body.style.padding = 0;
+
+  function sizeSet (target, width, height) {
+    target.style.width = width;
+    target.style.height = height;
+  }
+  function flexSet (target, flexDirection, justifyContent, alignItems ) {
+    target.style.display = "flex";
+    target.style.flexDirection = flexDirection;
+    target.style.justifyContent = justifyContent;
+    target.style.alignItems = alignItems;
+  }
+
+
+  const root = document.getElementById('root');
+  sizeSet (root, "100vw", "100vh");
+  flexSet (root, "row", "center", "center");
+
+  const img = root.children;
+    
+  let number = 10;
+  for(i=0; i<root.children.length; i++ ) {
+    img[i].style.position = "absolute";
+    img[i].style.top = `${number*4}vh`;
+    img[i].style.left = `${2.5*number+i*2}vw`;
+    console.log(img[i]);
+  }
+    
+
+</script>
+</html>
