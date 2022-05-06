@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div class="box"></div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, sunt inventore nam officiis rem doloremque maxime sint minus exercitationem fugit ex tempore assumenda vero ducimus molestiae maiores corrupti? Quod, voluptates quidem illo doloribus doloremque voluptatibus obcaecati quas magni cupiditate qui quaerat eum ut ea incidunt hic dolore cum dignissimos aliquid eveniet recusandae sit. Corrupti voluptatibus a neque eligendi nostrum distinctio inventore numquam reprehenderit. Earum ullam eligendi ipsa, doloribus facilis ipsum eius iure alias repudiandae accusamus aperiam vitae nostrum dignissimos dolores totam quos corporis pariatur nulla. Inventore fugiat cumque sint? Officiis repellat iste perspiciatis, facere recusandae excepturi culpa. Obcaecati, illum eaque. Corrupti voluptatibus a neque eligendi nostrum distinctio inventore numquam reprehenderit.</p>
+  </div>
+</body>
+<script>
+  document.body.style.margin = 0;
+  document.body.style.padding = 0;
+
+  function sizeSet (target, width, height) {
+    target.style.width = width;
+    target.style.height = height;
+  }
+
+  function flexSet (target, flexDirection, justifyContent, alignItems) {
+    target.style.display = "flex";
+    target.style.flexDirection = flexDirection;
+    target.style.justifyContent = justifyContent;
+    target.style.alignItems = alignItems;
+  }
+
+  const root = document.getElementById('root');
+  const box = document.querySelector('.box');
+  const p1 = document.querySelector('p');
+
+
+  sizeSet(root, "100vw", "100vh");
+  flexSet(root, "row", "center", "center");
+
+  sizeSet(box, "25vw", "60vh");
+  flexSet(box, "column", "flex-start", "center");
+  const header = document.createElement('div');
+  const h1 = document.createElement('h1');
+  const p2 = document.createElement('p');
+  const button = document.createElement('button');
+  
+  box.appendChild(header);
+  box.appendChild(h1);
+  box.appendChild(p2);
+  box.appendChild(button);
+
+
+  box.style.border = "2px solid #c4c4c4";
+  box.style.borderRadius = "3vw";
+  box.style.position = "relative";
+  box.style.left = "8vw";
+  box.style.zIndex = "2";
+  box.style.backgroundColor = "rgba(245, 245, 245, 0.9)";
+  box.style.boxShadow = "4vw 4vw 5vw 5px #808080";
+  console.log(box);
+
+  sizeSet(header, "20vw", "5vh");
+  
+  sizeSet(h1, "20vw", "20vh");
+  h1.textContent = "LOREM IPSUM";
+  h1.style.color = "#505050";
+  h1.style.fontSize = "5rem";
+  h1.style.fontWeight = "500";
+  h1.style.margin = "2vh";
+
+  sizeSet(p2, "20vw", "20vh");
+  p2.textContent = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, sunt inventore nam officiis rem doloremque maxime sint minus exercitationem fugit ex tempore assumenda vero ducimus molestiae maiores corrupti? Quod, voluptates quidem illo doloribus doloremque voluptatibus obcaecati quas.";
+  p2.style.color = "#505050";
+
+
+  sizeSet(button, "5vw", "4vh");
+  button.textContent = "close";
+  button.style.color = "#333";
+  button.style.border = "0";
+  button.style.borderRadius = "10px";
+  button.style.backgroundColor = "#c4c4c4";
+  button.style.marginLeft = "15vw";
+
+  
+  button.addEventListener('click',function() {
+    // box.style.display = "none";
+    box.style.visibility = "hidden";
+
+
+    p1.addEventListener('click',function(){
+    // box.style.display = "flex";
+    box.style.visibility = "visible";
+    });
+  });
+  
+
+  sizeSet(p1, "25vw", "40vh");
+
+</script>
+</html>

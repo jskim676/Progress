@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <button id="click-button">click</button>
+
+  <script>
+    const root = document.getElementById('root');
+
+    let sizeValue = 100;
+
+    root.style.width = `${sizeValue}px`;
+    root.style.height = `${sizeValue}px`;
+
+    console.log(root.style.width);
+    
+    root.style.backgroundColor = "#333";
+    
+    const clickBtn = document.getElementById('click-button');
+
+    
+    let opacityValue = 1;
+
+    root.style.opacity = opacityValue;
+
+    let data = true;
+    clickBtn.addEventListener('click',function () {
+      // opacityValue = 1;
+      // root.style.opacity = opacityValue;
+
+      // let fade = setInterval(function() {
+      //   if(opacityValue < 1) {
+      //     opacityValue = opacityValue + 0.1;
+      //     root.style.opacity = opacityValue;
+      //   } else {
+      //     clearInterval(fade);
+      //   }
+      // }, 20);
+      
+      // let fadeIn = setInterval(function(){
+      //   if(data === true) {
+      //     opacityValue = opacityValue + 0.1;
+      //     root.style.opacity = opacityValue;
+      //     if(opacityValue > 1) {
+      //       clearInterval(fadeIn);
+      //       root.style.opacity = opacityValue;
+      //       data = false;
+      //     }
+      //   } else {
+      //     opacityValue = opacityValue - 0.1;
+      //     root.style.opacity = opacityValue;
+      //     data = true;
+      //   }
+      // },20);
+      //----------------------------------------------- 
+        // if ( data === true ) {
+        //   let fadeIn = setInterval(function (){
+        //     opacityValue = opacityValue + 0.1;
+        //     root.style.opacity = opacityValue;
+
+        //     if (opacityValue > 1) {
+        //       clearInterval(fadeIn);
+        //       data = false;
+        //     }
+        //   },20);
+        // } else {
+        //   let fadeOut = setInterval (function () {
+        //     opacityValue = opacityValue - 0.1;
+        //     root.style.opacity = opacityValue;
+        //     console.log(root.style.opacity);
+
+        //     if (opacityValue <=0) {
+        //       clearInterval(fadeOut);
+        //       data = true;
+        //     }
+        //   },20);
+        // }
+      //----------------------------------------------- 
+      if(data === true) {
+        let increase = setInterval (function () {
+          sizeValue = sizeValue +10;
+          root.style.width = `${sizeValue}px`;
+          root.style.height = `${sizeValue}px`;
+          if(sizeValue > 500) {
+            clearInterval(increase);
+            data = false;
+          }
+
+        }, 10);
+      } else {
+        let decrease = setInterval (function () {
+          sizeValue = sizeValue -10;
+          root.style.width = `${sizeValue}px`;
+          root.style.height = `${sizeValue}px`;
+          console.log(root.style.width);
+          console.log(root.style.height);
+
+          if(sizeValue <= 100) {
+            clearInterval(decrease);
+            data = true;
+          }
+
+        }, 10);
+      }
+
+    });
+
+
+  </script>
+</body>
+</html>

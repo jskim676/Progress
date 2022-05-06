@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <button id="click-button">click</button>
+  </div>
+</body>
+<script>
+  function sizeSet (target, width, height) {
+    target.style.width = width;
+    target.style.height= height;
+  }
+
+  const root = document.getElementById('root');
+  const div = root.children[0].children;
+  const btn = document.getElementById('click-button');
+  
+  sizeSet(root, "100vw", "100vh");
+  root.style.display = "flex";
+  root.style.flexDirection = "column";
+  root.style.justifyContent = "center";
+  root.style.alignItems = "center";
+
+  sizeSet ( root.children[0], "800px", "200px");
+  root.children[0].style.display = "flex";
+  root.children[0].style.justifyContent = "space-around";
+  root.children[0].style.alignItems = "center";
+
+  console.log(root.children[0]);
+
+  console.log(div);
+
+  for(let i = 0; i<div.length; i++) {
+    sizeSet (div[i], "100px", "100px");
+    div[i].style.backgroundColor = "#c4c4c4";
+    div[i].style.opacity = 0;
+  }
+
+  let data = 0;
+  let isStatus = true;
+  let opacityValue = 0;
+
+  // 버튼을 클릭 하였을시 div의 첫번째 children opacity 값이 점점 올라간다. 1에 도달하였을시 div의 두번째 children opacity 값이 올라가며 div 의 다섯번째까지 순차적으로 반복한다. 
+  
+  btn.addEventListener('click', function ( ) {
+    console.log(isStatus);
+    if(isStatus === true) {
+      let timer = setInterval(function () {
+        if(data<div.length) {
+          opacityValue = opacityValue + 0.1;
+          div[data].style.opacity = opacityValue;
+          if(opacityValue >= 1) {
+            data++;
+            opacityValue = 0;
+          }
+        } else {
+          clearInterval(timer);
+          isStatus = false;
+        }
+      },50);
+    } else {
+      opacityValue = 0;
+      for(let i = 0; i<div.length; i++) {
+        div[i].style.opacity = opacityValue;
+        isStatus = true;
+      }
+    }
+  });
+  
+  
+  
+  
+  
+  // btn.addEventListener('click', function() {
+    //   let fadeIn = setInterval(function() {
+      //     if(data === 0) {
+        //       opacityValue = opacityValue + 0.1;
+  //       div[0].style.opacity = opacityValue;
+  //       console.log(opacityValue);
+  //       if(opacityValue >= 1) {
+    //         data = 1;
+    //         opacityValue = 0;
+    //         console.log(data);
+    //       }
+    //     }
+    
+    //     if (data === 1) {
+      //       opacityValue = opacityValue + 0.1;
+  //       div[1].style.opacity = opacityValue;
+  //       if(opacityValue >= 1) {
+    //         data = 2;
+    //         opacityValue = 0;
+    //         console.log(data);
+    //       }
+    //     }
+
+    //     if (data === 2) {
+      //       opacityValue = opacityValue + 0.1;
+      //       div[2].style.opacity = opacityValue;
+      //       if(opacityValue >= 1) {
+        //         data = 3;
+        //         opacityValue = 0;
+        //         console.log(data);
+        //       }
+        //     }
+        
+        //     if (data === 3) {
+          //       opacityValue = opacityValue + 0.1;
+          //       div[3].style.opacity = opacityValue;
+          //       if(opacityValue >= 1) {
+  //         data = 4;
+  //         opacityValue = 0;
+  //         console.log(data);
+  //       }
+  //     }
+  
+  //     if (data === 4) {
+    //       opacityValue = opacityValue + 0.1;
+    //       div[4].style.opacity = opacityValue;
+    //       if(opacityValue >= 1) {
+      //         clearInterval(fadeIn);
+  //         data = 5;
+  //         opacityValue = 0;
+  //         console.log(data);
+  //         isStatus = false;
+  //       }
+  //     }
+  
+  //   },50);
+  //   for(let i = 0; i<div.length; i++) {
+    //     if(isStatus === false){
+  //       opacityValue = 0;
+  //       div[i].style.opacity = opacityValue;
+  //     }
+  //   }
+  // });
+  
+
+
+  //
+
+
+  
+  // function appear (array, interval) {
+  //   if(isStatus === true) {
+  //     let timer = setInterval (function( ){
+  //       if(data<array.length) {
+  //         opacityValue = opacityValue + 0.1;
+  //         array[data].style.opacity = opacityValue;
+  //         if(opacityValue >= 1 ) {
+  //           data++;
+  //           opacityValue = 0;
+  //         }
+  //       } else {
+  //         clearInterval(timer);
+  //         isStatus = false;
+  //       }
+  //     },interval);
+  //   } else {
+  //     opacityValue = 0;
+  //     for(let i = 0; i<array.length; i++) {
+  //       array[i].style.opacity = opacityValue;
+  //       isStatus = true;
+  //     }
+  //   }
+  //   btn.addEventListener('click', function () {
+  //     appear(div, 50);
+  //   });
+  
+
+</script>
+</html>
