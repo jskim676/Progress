@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const body = document.body;
+  const bgColor = ["red","orange","yellow"];
+
+  body.style.background = "#ccc";
+
+  let timer = setInterval(function() {
+    if (body.clientWidth > 768) {
+      body.textContent = body.clientWidth;
+    } else if (body.clientWidth > 450) {
+      body.textContent = body.clientWidth;
+    } else {
+      body.textContent = body.clientWidth;
+    }
+  },500);
+
+
+
+
+  // if (body.clientWidth > 768) {
+  //   body.textContent = "임성민";
+  //   body.addEventListener ('click', function() {
+  //     body.style.backgroundColor = bgColor[0];
+  //   });
+  // } else if (body.clientWidth > 450) {
+  //   body.textContent = "장준형";
+  //   body.addEventListener ('click', function() {
+  //     body.style.backgroundColor = bgColor[1];
+  //   });
+  // } else {
+  //   body.textContent = "손만충";
+  //   body.addEventListener ('click', function() {
+  //     body.style.backgroundColor = bgColor[2];
+  //   });
+  // }
+</script>
+</html>
