@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    li {list-style: none;}
+    body {
+      width:100vw;
+      height:100vh;
+    }
+
+    #menu {
+      width:200px;
+      height:50px;
+      background-color: #c4c4c4;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+
+      position:relative;
+      z-index: 2;
+      
+      margin:100px;
+    }
+
+    #menu > .item {
+      width:200px;
+      height:50px;
+
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      color:#fff;
+
+      position:absolute;
+      margin-top:100px;
+    }
+  </style>
+</head>
+<body>
+  <ul id="menu">menu-1
+    <li class="item">menu-item-1</li>
+    <li class="item">menu-item-1</li>
+    <li class="item">menu-item-1</li>
+    <li class="item">menu-item-1</li>
+  </ul>
+</body>
+<script>
+const menu = document.getElementById('menu');
+const li = menu.children;
+console.log(menu);
+console.log(li);
+
+let data = true;
+
+
+menu.addEventListener('click',function() {
+  if(data === true ){
+    for(let i = 0; i<li.length; i++) {
+      li[i].style.backgroundColor = "rgb(100, 100, 100)";
+      li[i].style.color = "#000";
+      li[i].style.display = "flex";
+      li[i].style.top = `${100*i}px`;
+      data = false;
+    }
+  } else {
+    for(let i = 0; i<li.length; i++) {
+      li[i].style.display = "none";
+      data = true;
+    }
+  }
+});
+
+
+
+
+</script>
+</html>

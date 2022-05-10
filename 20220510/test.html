@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    li {list-style: none;}
+
+    #menu {
+      width:200px;
+      height:50px;
+      background-color: #c4c4c4;
+
+      position:relative;
+      
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .item {
+      width:200px;
+      height:50px;
+      background-color: rgb(100, 100, 100);
+
+      position:absolute;
+    }
+
+    .item:nth-child(1) {
+      margin-top:100px;
+    }
+
+    .item:nth-child(2) {
+      margin-top:200px;
+    }
+
+    .item:nth-child(3) {
+      margin-top:300px;
+    }
+
+    .item:nth-child(4) {
+      margin-top:400px;
+    }
+
+  </style>
+</head>
+<body>
+  <ul id="menu">
+    <li class="item"></li>
+    <li class="item"></li>
+    <li class="item"></li>
+    <li class="item"></li>
+  </ul>
+</body>
+<script>
+  const menu = document.getElementById('menu');
+  const li = menu.children;
+
+
+</script>
+</html>

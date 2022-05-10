@@ -1,0 +1,48 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color:salmon;
+    }
+
+    #root > div:nth-child(1) {background-color: #333;}
+    #root > div:nth-child(2) {background-color: #ddd;}
+
+    .none {
+      display:none;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="button-elem">menu-1</div>
+    <div id="menu-items">items-1</div>
+  </div>
+  <script>
+    const btn = document.getElementById('button-elem');
+    const menuItems = document.getElementById('menu-items');
+    console.log(btn);
+    console.log(menuItems);
+
+    let booleanType = true;
+    btn.addEventListener('click',function() {
+      if(menuItems.classList.contains('none')) {
+        menuItems.classList.remove('none');
+      } else {
+        menuItems.classList.add('none');
+      }
+    });
+
+  </script>
+</body>
+</html>

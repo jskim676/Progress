@@ -7,13 +7,18 @@
   <title>Document</title>
 </head>
 <body>
-  
   <script>
+    console.log(this);
+    // ? this가 뭐야
 
-    let getInputData = prompt("숫자를 적어라 준식아");
-    console.log(getInputData + "값을 받아왔습니다.");
-    document.body.style.backgroundColor = getInputData;
-
+    var person = {
+      name : 'Lee',
+      printName : function () {
+        console.log(this);
+      }
+    }
+    
+    person.printName();
 
   </script>
 </body>
