@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width:100vw;
+      height:500vh;
+
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    
+  </div>
+  <script>
+    const root = document.getElementById('root');
+
+    let height = document.body.offsetHeight;
+    // let currentScrollValue = window.scrollY;
+    
+    
+    window.addEventListener('scroll',(event) => {
+      if(window.scrollY > 0) {
+        console.log('당신은 방금 스크롤을 내렸습니다');
+        console.log(window.scrollY);
+        console.log('전체값' + height);
+      }
+
+      if(window.scrollY >= height) {
+        console.log('야호');
+      }
+
+    });
+
+  </script>
+</body>
+</html>

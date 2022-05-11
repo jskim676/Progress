@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width:100vw;
+      height:100vh;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div {
+      width:35vw;
+      height:20vh;
+    }
+
+    #root > div:nth-child(1) {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+    } 
+
+    #root > div:nth-child(1) > h1 {
+      line-height:2vh;
+      font-size:4rem;
+    }
+
+    #root > div:nth-child(1) > h1:nth-child(1) {
+      color:rgba(152, 255, 181, 0.5);
+    }
+    #root > div:nth-child(1) > h1:nth-child(2) {
+      color:rgba(250, 139, 127, 0.5);
+    }
+    #root > div:nth-child(1) > h1:nth-child(3) {
+      color:rgba(246, 248, 138, 0.5);
+    }
+    #root > div:nth-child(1) > h1:nth-child(4) {
+      color:rgba(250, 139, 127, 0.5);
+
+    }
+    #root > div:nth-child(1) > h1:nth-child(5) {
+      color:rgba(234, 131, 255, 0.5);
+    }
+
+    #root > div:nth-child(1) > h1:nth-child(6) {
+      color:rgba(118, 116, 255, 0.5);
+    }
+
+
+
+    #root > div:nth-child(2) {
+      display:flex;
+      justify-content: center;
+      align-items: flex-end;
+    } 
+
+    #root > div:nth-child(2) > p {
+      color:#c4c4c4;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="div">
+      <h1>function</h1>
+      <h1>variable</h1>
+      <h1>index</h1>
+      <h1>constant</h1>
+      <h1>object</h1>
+      <h1>array</h1>
+    </div>
+    <div>
+      <p>The greatest glory in living lies not in never falling, but in rising every time we fall.</p>
+    </div>
+  </div>
+</body>
+<script>
+  const div = document.getElementById('div');
+  const h1 = div.children;
+
+  let data = true;
+  let number = 2;
+
+  for(let i = 0; i<h1.length; i++) {
+    h1[i].addEventListener('wheel',function() {
+      if(data === true) {
+        h1[i].style.lineHeight = `${number}vh`;
+        number++;
+        if(number>15) {
+          data = false;
+        }
+      } else {
+        h1[i].style.lineHeight = `${number}vh`;
+        number--;
+        if(number<=2) {
+          data = true;
+        }
+      }
+    });
+  }
+
+
+
+</script>
+</html>

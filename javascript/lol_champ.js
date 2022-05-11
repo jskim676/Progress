@@ -45,16 +45,20 @@ const no = false
 
 
 
+// 시간에 따라 순서대로 챔프가 출력
+
+// let count = 0;
+// let data = true;
+// let timer = setInterval(function() {
+
+//   if(count<lolchamp.length) {
+//     console.log(lolchamp[count]);
+//     count++;
+//   } else {
+//     count = 0;
+//   }
+// },10);
 
 
-let count = 0;
-let data = true;
-let timer = setInterval(function() {
 
-  if(count<lolchamp.length) {
-    console.log(lolchamp[count]);
-    count++;
-  } else {
-    count = 0;
-  }
-},1);
+
