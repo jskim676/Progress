@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    #root {
+      width : 100vw;
+      height: 100vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container {
+      width:35vw;
+      height:70vh;
+      display:flex;
+
+      position:relative;
+    }
+
+    .main {
+      width:20vw;
+      height:60vh;
+      position:relative;
+      /* box-shadow: 20px 20px 40px 1px rgb(53, 168, 90); */
+    }
+
+    .main > div:nth-child(1) {
+      width:inherit;
+      height:30vh;
+      background-color:rgb(208, 90, 236);
+      border:1px solid blue;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .main > div:nth-child(1) > h1 {
+      width:18vw;
+      color:white;
+      font-size: 3rem;
+      font-style: italic;
+      text-decoration: solid underline rgb(0, 0, 0) 1px;
+      text-underline-position: under;
+    }
+
+    .main > div:nth-child(2) {
+      width:8vw;
+      height:4vh;
+      background-color: rgb(214, 235, 69);
+      border:1px solid red;
+
+      font-size:1.2rem;
+      color:rgb(53, 168, 90);
+      font-weight: bold;
+      font-style: italic;
+
+      border-radius:6vw;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+
+      position:absolute;
+      top:28vh;
+      right:1vw;
+    }
+
+    .main > div:nth-child(3) {
+      width:inherit;
+      height:30vh;
+      background-color: rgb(46, 196, 135);
+      border:1px solid red;
+      
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .main > div:nth-child(3) > span {
+      width:18vw;
+      color:rgb(36,131,70);
+      font-size: 0.8rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .back {
+      width:20vw;
+      height:60vh;
+      background-color: rgba(212, 212, 212, 0.5);
+
+      display:flex;
+      flex-direction:column;
+      justify-content: space-around;
+      align-items: center;
+
+      position:absolute;
+      top:10vh;
+      right:0vw;
+      z-index: -2;
+    }
+
+    .back > h1 {
+      width:18vw;
+      color:rgb(100, 100, 100);
+      font-size: 4rem;
+      font-weight: normal;
+      
+    }
+
+    .back > p {
+      margin-left:10vw;
+    }
+    
+    .back > span {
+      width:18vw;
+      font-size: 0.8rem;
+      font-weight: normal;
+    }
+
+    .blur {
+      width:20vw;
+      height:60vh;
+      background-color: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(1px);
+      position:absolute;
+      top:10vh;
+      right:0vw;
+      z-index: -1;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="container">
+      <div class="main">
+        <div>
+          <h1>BORDERLINE DESIGN</h1>
+        </div>
+        <div>gooood?</div>
+        <div>
+          <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ut mollitia quae, est quam aliquam ratione hic, cupiditate saepe beatae quos odio illo ipsa eius! Illo ipsam earum quae nam, sapiente qui architecto, sint praesentium neque temporibus nesciunt fugiat. Dolorum cumque accusamus sequi iure, culpa sed aut sapiente, suscipit fugiat totam iste dolorem ullam fugit accusantium debitis pariatur voluptatem at, fuga veniam sunt. Totam sapiente commodi, quos temporibus dignissimos rerum laboriosam officia corporis delectus enim iusto esse soluta officiis veniam expedita pariatur alias cum iure non et? At consectetur animi, nihil recusandae tenetur dignissimos voluptatem deleniti, mollitia iure nostrum numquam.
+          </span>
+        </div>
+      </div>
+      <div class="back">
+        <h1>MODERN DESIGN</h1>
+        <p>Lorem Ipsum</p>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, laudantium impedit. Dignissimos mollitia ab animi non voluptatibus debitis culpa error nulla assumenda officiis? Aliquam, necessitatibus possimus? Sit reiciendis accusantium doloribus beatae quae iusto eius quisquam. Magnam nulla labore non modi magni ipsa necessitatibus vero ullam, iste, reprehenderit esse nostrum vitae aperiam dicta corrupti minus error architecto aut praesentium aspernatur reiciendis voluptatibus commodi. Labore nisi possimus repellat magnam molestias deserunt architecto ullam, mollitia voluptas error dolores, quidem officiis iste ipsum earum voluptatum aliquid quia. Sequi eveniet atque fuga non magnam. Voluptas consectetur exercitationem necessitatibus. Earum perspiciatis dolore recusandae deleniti, saepe ex.</span>
+      </div>
+      <div class="blur"></div>
+    </div>
+  </div>
+</body>
+</html>

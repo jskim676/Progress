@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    body {
+      color:#eee;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color: rgb(22, 22, 24);
+      
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width:50vw;
+      height:50vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container > p {
+      font-size: 3rem;
+      padding:0.5rem;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .text {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .cursor {
+      display:inline-block;
+      background-color: #ccc;
+      margin-left:0.1rem;
+      width:3px;
+      animation: blink 1s infinite;
+    }
+
+    .cursor .typing {
+      animation : none;
+    }
+
+    @keyframes blink {
+      0% {background-color:#ccc;}
+      49% {background-color:#ccc;}
+      50% {background-color:transparent;}
+      99% {background-color:transparent;}
+      100% {background-color:#ccc;}
+    }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class="container">
+      <p>League of Legends</p>
+      <p>
+        <span class="text">
+        </span>
+        <span class="cursor">
+          &nbsp;
+        </span>
+      </p>
+    </div>
+  </div>
+</body>
+<script>
+  const ctr = document.querySelector('.container');
+  console.log(ctr);
+
+  const text = document.querySelector('.text');
+  console.log(text);
+
+  const textArr = ["OP.GG", "Fow.kr", "Inven", "LOL.ITEO" ]
+
+
+  let index = 0;
+
+  window.addEventListener('click',function() {
+    if(textArr.length !== index) {
+      text.textContent = textArr[index];
+      index++;
+    } else {
+      index = textArr.length;
+    }
+  });
+
+  function type () {
+
+  }
+
+
+
+
+
+
+</script>
+</html>

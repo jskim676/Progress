@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    .page1 {
+      width:100vw;
+      height:100vh;
+      background-color: rgb(22, 22, 24);
+      color:#eee;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page2 {
+      width:100vw;
+      height:100vh;
+      background-color: rgb(22, 22, 24);
+      color:#eee;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+
+    .on {
+      display:none;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="page1">여기는 1페이지 입니다
+    <button>click</button>
+  </div>
+  <div class="page2">여기는 2페이지 입니다</div>
+</body>
+<script>
+  const page1 = document.querySelector('.page1');
+  const page2 = document.querySelector('.page2');
+  const btn = document.querySelector('button');
+
+  page2.classList.add('on');
+
+  let heightValue = page1.offsetHeight;
+  console.log(window.innerHeight);
+
+
+  
+  btn.addEventListener('click',function(){
+    if(page2.classList.contains('on')) {
+      page2.classList.remove('on');
+      
+      
+      window.scrollTo({
+        top: page2.offsetHeight,
+        behavior:"smooth"
+      })
+
+      setTimeout(function(){
+        page1.classList.add('on');
+      },600);
+
+    }
+    
+    // if(window.addEventListener('wheel',function(){
+    //   page1.classList.add('on');
+    // }));
+
+
+
+
+
+
+
+  });
+  
+
+</script>
+</html>
