@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color: #ccc;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width:15vw;
+      height:40vh;
+      background-color: #eee;
+      margin:2vw;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class="card" data-value="1"></div>
+    <div class="card" data-value="2"></div>
+    <div class="card" data-value="3"></div>
+    <div class="card" data-value="4"></div>
+    <div class="card" data-value="5"></div>
+  </div>
+</body>
+<script>
+  const root = document.getElementById('root');
+  const card = document.getElementsByClassName('card');
+  console.log(root);
+  console.log(card);
+
+  root.addEventListener('click', (event) => {
+    let getDataset = event.target.dataset.value;
+    console.log(getDataset);
+
+      for(let i=0; i<card.length; i++) {
+        if(card[i].dataset.value === getDataset) {
+          card[i].style.backgroundColor = "rgba(255,70,200,1)";
+        } else {
+          card[i].style.backgroundColor = "rgba(255,70,200,0.3)";
+        }
+      }
+
+  });
+
+</script>
+</html>
