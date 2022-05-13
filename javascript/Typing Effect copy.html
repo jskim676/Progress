@@ -81,7 +81,7 @@ let charIndex = 0;
 
 function type() {
   if (charIndex < textArray[textArrayIndex].length) {
-    // 단어의 철자 갯수가 선택 숫자보다 크다면 
+    // 단어의 철자 총 갯수가 철자 선택숫자보다 크다면 
     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     // typing 이라는 클래스가 존재하지 않으면 추가해줘
     typedTextSpan.style.color = color[textArrayIndex];
@@ -94,7 +94,7 @@ function type() {
   } 
   else {
     cursorSpan.classList.remove("typing");
-  	setTimeout(erase, newTextDelay);
+    setTimeout(erase, newTextDelay);
   }
 }
 
@@ -103,7 +103,7 @@ function erase() {
     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     // typing 이라는 클래스가 존재하지 않으면 추가해줘
     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-    // 글자 내용에 한
+    // 
     charIndex--;
     setTimeout(erase, erasingDelay);
   } 
