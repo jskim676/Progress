@@ -1,0 +1,195 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+
+@mixin flexsetting ($a,$b,$c) {
+  display:flex;
+  flex-direction: $a;
+  justify-content: $b;
+  align-items: $c;
+}
+
+body {
+  width:100vw;
+  height:500vh;
+
+  & > #page0 {
+    width:100vw;
+    height:100vh;
+    background-color: #111111;
+
+    @include flexsetting(column,flex-end ,flex-start );
+    
+    & > div:nth-child(1) {
+      width:65vw;
+      height:15vh;
+      margin-left:15vw;
+
+      @include flexsetting(row,space-between ,center);
+      // Gong Yoo
+      & > h1 {
+        color:#eeeeee;
+        font-size: 200px;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+      }
+    }
+
+    & > div:nth-child(2) {
+      width:inherit;
+      height:50vh;
+
+      @include flexsetting(row,center , flex-start );
+
+      // stage, real
+      & > div:nth-child(1) {
+        width:55vw;
+        height:40vh;
+
+        @include flexsetting(column,center ,center );
+
+        & > div:nth-child(1) {
+          width:15vw;
+          height:10vh;
+
+          & > p {
+            color:#eeeeee;
+            text-align: center;
+          }
+        }
+
+        & > div:nth-child(2) {
+          width:8vw;
+          height:5vh;
+
+          & > p {
+            color:#eeeeee;
+            text-align: center;
+          }
+        }
+      }
+
+      & > div:nth-child(2) {
+        width:45vw;
+        height:inherit;
+
+        @include flexsetting(column,space-around, center);
+
+        // MORE
+        & > div:nth-child(1) {
+          width:6vw;
+          height:6vh;
+          border:3px solid #FD9901;
+          font-weight: bold;
+
+          transform: rotate(-90deg);
+
+          @include flexsetting(row,center ,center );
+          & > p {
+            font-size: 22px;
+            font-weight: 500;
+            color:#eeeeee;
+            text-align: center;
+            user-select: none;
+          }
+        }
+
+        & > div {
+          width:18vw;
+          height:10vh;
+          text-align: center;
+          color:#eeeeee;
+
+        }
+      }
+    }
+  }
+  
+  & > #page1 {
+    width:100vw;
+    height:100vh;
+    border:1px solid red;
+
+    @include flexsetting(column,center , center );
+
+
+    & > div:nth-child(1) {
+      width:inherit;
+      height:50vh;
+      border:1px solid blue;
+
+      @include flexsetting(row,space-between ,flex-start );
+
+      & > div:nth-child(1) {
+        width:20vw;
+        height:inherit;
+        border:1px solid red;
+
+        @include flexsetting(column,space-around , center);
+
+        & > h1 {
+          font-size: 75px;
+          font-weight: 500;
+          font-family: 'Inter', sans-serif;
+        }
+
+        & > div:nth-child(2) {
+
+          & > p {
+            text-align: center;
+          }
+        }
+      }
+
+      & > p {
+        width:35vw;
+        height:30vh;
+        text-align: center;
+        padding:5vw;
+
+        @include flexsetting(row, center ,center );
+      }
+    }
+    // slide
+    & > div:nth-child(2) {
+      width:50vw;
+      height:50vh;
+      @include flexsetting(row, space-around , center );
+      & > div:nth-child(1) {
+        width:2vw;
+        height:2vw;
+
+        border-top:0.5vw solid black;
+        border-right:0.5vw solid black;
+
+        transform: rotate(-135deg);
+      }
+
+      & > div:nth-child(3) {
+        width:2vw;
+        height:2vw;
+
+        border-top:0.5vw solid black;
+        border-right:0.5vw solid black;
+
+        transform: rotate(45deg);
+      }
+    }
+  }
+  
+  & > #page2 {
+    width:100vw;
+    height:100vh;
+    border:1px solid red;
+  }
+
+  & > #page3 {
+    width:100vw;
+    height:100vh;
+    border:1px solid red;
+  }
+
+  & > #page4 {
+    width:100vw;
+    height:100vh;
+    border:1px solid red;
+  }
+}

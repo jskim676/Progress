@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <style>
+    .on {
+      visibility: hidden;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="page0" data-page="0">
+    <!-- Gong Yoo -->
+    <div>
+      <h1>Gong</h1>
+      <h1>Yoo</h1>
+    </div>
+    <!-- Name -->
+    <div>
+      <!-- stage ,real -->
+      <div id="name">
+        <div>
+          <p>Stage Name</p>
+          <p>His father's last name is Gong, and his mother's last name is Yoo</p>
+        </div>
+        <div>
+          <p>Real Name</p>
+          <p>Gong Ji-cheol</p>
+        </div>
+      </div>
+      <div>
+        <!-- more -->
+        <div id="more">
+          <p>
+            MORE
+          </p>
+        </div>
+        <div id="namemean">
+          I felt a sense of responsibility as it was a Stage Name made by combining my parents' last name, so I worked even harder as an actor. It also means "to live a shared life."
+        </div>
+      </div>
+    </div>
+    <img src="https://i.ibb.co/phdsnwy/image.png" alt="main" style="width:23vw; height:85vh; position:absolute; left:43vw; ">
+  </div>
+  <div id="page1" data-page="1">
+    <div>
+      <!-- FILMS -->
+      <div>
+        <h1>
+          FILMS
+        </h1>
+        <div>
+          <p>SEOBOK</p>
+          <p>Kim Ji Young: Born 1982</p>
+          <p>The Age of Shadows</p>
+          <p>Train to Busan</p>
+          <p>A Man and A Woman</p>
+          <p>The Suspect</p>
+          <p>Silenced</p>
+        </div>
+      </div>
+      <p>
+        He debuted in 1999 as a model for the clothing brand STORM, and made his debut in the entertainment industry with the seventh Mnet VJ in 2000. In 2001, he made his official debut as an actor through the KBS drama 《School 4》
+      </p>
+    </div>
+    <!-- slide -->
+    <div>
+      <div id="left"></div>
+      <img src="https://i.ibb.co/6mQMmL2/2.png" alt="부산행" style="width:35vw; height:48vh;">
+      <div id="right"></div>
+    </div>
+  </div>
+  <div id="page2" data-page="2">
+
+  </div>
+  <div id="page3" data-page="3">
+
+  </div>
+  <div id="page4" data-page="4">
+
+  </div>
+</body>
+<script>
+  const page0 = document.getElementById('page0');
+  const more = document.getElementById('more');
+  const name = document.getElementById('name');
+  const namemean = document.getElementById('namemean');
+
+  let data = true;
+  more.addEventListener('click',function(){
+    if(data===true) { 
+      name.classList.add('on');
+      namemean.classList.add('on');
+      data = false;
+    } else {
+      name.classList.remove('on');
+      namemean.classList.remove('on');
+      data = true;
+    }
+  });
+
+
+</script>
+</html>

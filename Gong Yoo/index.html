@@ -13,7 +13,7 @@
 <body>
   <div id="page0" data-page="0">
       <div id="root">
-        <img src="https://i.ibb.co/phdsnwy/image.png" alt="main" style="width:20vw; height:70vh;">
+        <!-- <img src="https://i.ibb.co/phdsnwy/image.png" alt="main" style="width:24vw; height:70vh;"> -->
       </div>
   </div>
   <div id="page1" data-page="1">
@@ -55,19 +55,19 @@
 
   sizeSet(document.body, "100vw", "500vh")
   sizeSet(page0, "100vw", "100vh")
+  flexSet(page0, "row", "center", "flex-end");
   sizeSet(page1, "100vw", "100vh")
   sizeSet(page2, "100vw", "100vh")
   sizeSet(page3, "100vw", "100vh")
   sizeSet(page4, "100vw", "100vh")
 
+  page0.style.border = "1px solid red";
   page1.style.border = "1px solid red";
+  page2.style.border = "1px solid red";
+  page3.style.border = "1px solid red";
+  page4.style.border = "1px solid red";
 
-
-  for(let i = 0; i<document.body.length; i++) {
-    document.body.children[i].style.border = "1px solid red";
-    console.log(document.body.children[i].style.border);
-  }
-
+  const page0div = document.createElement()
 
 
 </script>
