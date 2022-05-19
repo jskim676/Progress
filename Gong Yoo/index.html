@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+  </style>
+</head>
+<body>
+  <div id="page0" data-page="0">
+      <div id="root">
+        <img src="https://i.ibb.co/phdsnwy/image.png" alt="main" style="width:20vw; height:70vh;">
+      </div>
+  </div>
+  <div id="page1" data-page="1">
+
+  </div>
+  <div id="page2" data-page="2">
+
+  </div>
+  <div id="page3" data-page="3">
+
+  </div>
+  <div id="page4" data-page="4">
+
+  </div>
+
+
+</body>
+<script>
+  function sizeSet(target, width, height) {
+    target.style.width = width;
+    target.style.height = height;
+  }
+
+  function flexSet(target, flexDirection, justifyContent, alignItems) {
+    target.style.display = "flex";
+    target.style.flexDirection = flexDirection;
+    target.style.justifyContent = justifyContent;
+    target.style.alignItems = alignItems;
+  }
+  
+  const page0 = document.getElementById('page0');
+  const page1 = document.getElementById('page1');
+  const page2 = document.getElementById('page2');
+  const page3 = document.getElementById('page3');
+  const page4 = document.getElementById('page4');
+
+
+
+
+  sizeSet(document.body, "100vw", "500vh")
+  sizeSet(page0, "100vw", "100vh")
+  sizeSet(page1, "100vw", "100vh")
+  sizeSet(page2, "100vw", "100vh")
+  sizeSet(page3, "100vw", "100vh")
+  sizeSet(page4, "100vw", "100vh")
+
+  page1.style.border = "1px solid red";
+
+
+  for(let i = 0; i<document.body.length; i++) {
+    document.body.children[i].style.border = "1px solid red";
+    console.log(document.body.children[i].style.border);
+  }
+
+
+
+</script>
+</html>
