@@ -11,6 +11,8 @@ body {
   width:100vw;
   height:500vh;
 
+  // page 0
+
   & > #page0 {
     width:100vw;
     height:100vh;
@@ -27,7 +29,7 @@ body {
       // Gong Yoo
       & > h1 {
         color:#eeeeee;
-        font-size: 200px;
+        font-size: 10vw;
         font-weight: 500;
         font-family: 'Inter', sans-serif;
       }
@@ -37,20 +39,22 @@ body {
       width:inherit;
       height:50vh;
 
-      @include flexsetting(row,center , flex-start );
+      @include flexsetting(row,flex-start , flex-start );
 
       // stage, real
       & > div:nth-child(1) {
-        width:55vw;
+        width:45vw;
         height:40vh;
 
-        @include flexsetting(column,center ,center );
+        @include flexsetting(column,space-evenly ,center );
 
         & > div:nth-child(1) {
           width:15vw;
           height:10vh;
 
           & > p {
+            width:22vw;
+            height:5vh;
             color:#eeeeee;
             text-align: center;
           }
@@ -61,6 +65,8 @@ body {
           height:5vh;
 
           & > p {
+            width:15vw;
+            height:5vh;
             color:#eeeeee;
             text-align: center;
           }
@@ -68,10 +74,10 @@ body {
       }
 
       & > div:nth-child(2) {
-        width:45vw;
-        height:inherit;
+        width:37vw;
+        height:40vh;
 
-        @include flexsetting(column,space-around, center);
+        @include flexsetting(column,space-evenly, flex-end);
 
         // MORE
         & > div:nth-child(1) {
@@ -92,8 +98,8 @@ body {
           }
         }
 
-        & > div {
-          width:18vw;
+        & > p {
+          width:16vw;
           height:10vh;
           text-align: center;
           color:#eeeeee;
@@ -103,72 +109,108 @@ body {
     }
   }
   
+  // page 1
+
   & > #page1 {
     width:100vw;
     height:100vh;
-    border:1px solid red;
+    background-color: #111111;
 
     @include flexsetting(column,center , center );
 
 
     & > div:nth-child(1) {
-      width:inherit;
+      width:80vw;
       height:50vh;
-      border:1px solid blue;
 
       @include flexsetting(row,space-between ,flex-start );
 
       & > div:nth-child(1) {
         width:20vw;
         height:inherit;
-        border:1px solid red;
 
         @include flexsetting(column,space-around , center);
 
-        & > h1 {
-          font-size: 75px;
-          font-weight: 500;
-          font-family: 'Inter', sans-serif;
+        & > div:nth-child(1) {
+          position:relative;
+
+          & > h1 {
+            color:#eeeeee;
+            font-size: 4vw;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+          }
+
+          & > h1:nth-child(1) {
+          }
+
+          & > h1:nth-child(2) {
+            position:absolute;
+            top:4vh;
+            left:4vw;
+            z-index: 0;
+            opacity: 0.1;
+          }
+
         }
 
         & > div:nth-child(2) {
 
           & > p {
+            padding:0.3vw;
+            color:#eeeeee;
             text-align: center;
           }
         }
       }
 
-      & > p {
-        width:35vw;
-        height:30vh;
+      & > p { 
+        width:22vw;
+        height:50vh;
+        color:#eeeeee;
         text-align: center;
-        padding:5vw;
+        margin-right:10vw;
 
         @include flexsetting(row, center ,center );
       }
     }
-    // slide
+
     & > div:nth-child(2) {
-      width:50vw;
+      width:55vw;
       height:50vh;
+
       @include flexsetting(row, space-around , center );
+
       & > div:nth-child(1) {
         width:2vw;
         height:2vw;
 
-        border-top:0.5vw solid black;
-        border-right:0.5vw solid black;
+        border-top:0.5vw solid #eeeeee;
+        border-right:0.5vw solid #eeeeee;
 
         transform: rotate(-135deg);
+      }
+
+      // slide
+      & > div:nth-child(2) {
+        width:40vw;
+        height:45vh;
+
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        position: relative;
+
+        overflow: hidden;
       }
 
       & > div:nth-child(3) {
         width:2vw;
         height:2vw;
 
-        border-top:0.5vw solid black;
-        border-right:0.5vw solid black;
+        border-top:0.5vw solid #eeeeee;
+        border-right:0.5vw solid #eeeeee;
 
         transform: rotate(45deg);
       }

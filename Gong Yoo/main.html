@@ -43,20 +43,22 @@
             MORE
           </p>
         </div>
-        <div id="namemean">
+        <p id="namemean">
           I felt a sense of responsibility as it was a Stage Name made by combining my parents' last name, so I worked even harder as an actor. It also means "to live a shared life."
-        </div>
+        </p>
       </div>
     </div>
-    <img src="https://i.ibb.co/phdsnwy/image.png" alt="main" style="width:23vw; height:85vh; position:absolute; left:43vw; ">
+    <img src="https://i.ibb.co/phdsnwy/image.png" alt="main" style="width:23vw; height:85vh; position:absolute; left:40vw; ">
   </div>
+
   <div id="page1" data-page="1">
     <div>
       <!-- FILMS -->
       <div>
-        <h1>
-          FILMS
-        </h1>
+        <div>
+          <h1>FILMS</h1>
+          <h1>DRAMAS</h1>
+        </div>
         <div>
           <p>SEOBOK</p>
           <p>Kim Ji Young: Born 1982</p>
@@ -73,17 +75,22 @@
     </div>
     <!-- slide -->
     <div>
-      <div id="left"></div>
-      <img src="https://i.ibb.co/6mQMmL2/2.png" alt="부산행" style="width:35vw; height:48vh;">
-      <div id="right"></div>
+      <div id="prev"></div>
+      <div id="slide">
+        <!-- file image -->
+      </div>
+      <div id="next"></div>
     </div>
   </div>
+
   <div id="page2" data-page="2">
 
   </div>
+
   <div id="page3" data-page="3">
 
   </div>
+
   <div id="page4" data-page="4">
 
   </div>
@@ -107,6 +114,62 @@
     }
   });
 
+  // page 1
 
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const slide = document.getElementById('slide');
+  console.log(slide);
+  
+  const film = slide.children;
+  
+  let fileImg0 = document.createElement('img');
+  fileImg0.src = "https://i.ibb.co/kywzRdk/image.png"
+  fileImg0.style.width = "33vw";
+  fileImg0.style.height = "45vh";
+  slide.appendChild(fileImg0);
+  
+  let fileImg1 = document.createElement('img');
+  fileImg1.src = "https://i.ibb.co/6mQMmL2/2.png"
+  fileImg1.style.width = "33vw";
+  fileImg1.style.height = "45vh";
+  slide.appendChild(fileImg1);
+  
+  let fileImg2 = document.createElement('img');
+  fileImg2.src = "https://i.ibb.co/PjgdHGV/image.png"
+  fileImg2.style.width = "33vw";
+  fileImg2.style.height = "45vh";
+  slide.appendChild(fileImg2);
+  
+  const filmItems = Array.from(film);
+  console.log(filmItems);
+  
+  filmItems[0].style.position = "absolute";
+  filmItems[0].style.right = "60vw";
+  
+  filmItems[1].style.position = "absolute";
+  
+  filmItems[2].style.position = "absolute";
+  filmItems[2].style.left = "60vw"; 
+  
+
+  
+  prev.addEventListener('click',function () {
+    let arr = filmItems.shift();
+    console.log(arr);
+    filmItems.push(arr);
+    console.log(filmItems);
+  });
+  
+  next.addEventListener('click', function() {
+    let arr = filmItems.pop();
+    console.log(arr);
+    filmItems.unshift(arr);
+    console.log(filmItems);
+  });
+  
+  
+  
+  
 </script>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      width:100vw;
+      height:100vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root {
+      width:30vw;
+      height:30vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      border:1px solid red;
+
+      position:relative;
+      
+
+    }
+
+    #root > div:nth-child(1){
+      width:150px;
+      height:100px;
+      background-color: #ccc;
+      position:absolute;
+      right:800px;
+    }
+  
+    #root > div:nth-child(2){
+      width:150px;
+      height:100px;
+      background-color: #ccc;
+      position:absolute;
+    }
+
+    #root > div:nth-child(3){
+      width:150px;
+      height:100px;
+      background-color: #ccc;
+      position:absolute;
+      left:800px;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <button id="prev">Prev</button>
+  <div id="root">
+    <div>0</div>
+    <div>1</div>
+    <div>2</div>
+  </div>
+  <button id="next">Next</button>
+</body>
+<script>
+  const root = document.getElementById('root');
+  const div = Array.from(root.children);
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  console.log(div);
+
+
+  
+  
+
+
+
+
+</script>
+</html>
