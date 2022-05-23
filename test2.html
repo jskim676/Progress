@@ -5,55 +5,144 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    *{margin:0; padding:0; box-sizing: border-box;}
-
-    #root {
-      width:100vw;
-      height:100vh;
-      background-color: #ccc;
-      display:flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .card {
-      width:15vw;
-      height:40vh;
-      background-color: #eee;
-      margin:2vw;
-    }
-
-  </style>
 </head>
 <body>
   <div id="root">
-    <div class="card" data-value="1"></div>
-    <div class="card" data-value="2"></div>
-    <div class="card" data-value="3"></div>
-    <div class="card" data-value="4"></div>
-    <div class="card" data-value="5"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-</body>
-<script>
-  const root = document.getElementById('root');
-  const card = document.getElementsByClassName('card');
-  console.log(root);
-  console.log(card);
+  <button id="button">click</button>
+  <script>
+    const root = document.getElementById('root');
+    const span = Array.from(root.children);
+    const btn = document.getElementById('button');
+    console.log(span);
 
-  root.addEventListener('click', (event) => {
-    let getDataset = event.target.dataset.value;
-    console.log(getDataset);
+    const number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    
+    let count = 0;
+    let loop = 0;
+    btn.addEventListener('click', function() {
+      // let timer = setInterval(function() {
+      //   for(let i=0; i<span.length; i++) {
+      //     span[i].textContent = number[count];
+      //     count++;
+      //     console.log(span[i].textContent);
+      //     if(count === number.length) {
+      //       count = 0;
+      //       loop++;
+      //       console.log(`${loop}번 반복`);
+      //     }
+      //     if(loop === 20) {
+      //       span[0].textContent = 1;
+      //       span[1].textContent = 5;
+      //       span[2].textContent = 0;
+      //       span[3].textContent = 0;
+      //       clearInterval(timer);
+      //     } 
+      //   }
+      // },50);
 
-      for(let i=0; i<card.length; i++) {
-        if(card[i].dataset.value === getDataset) {
-          card[i].style.backgroundColor = "rgba(255,70,200,1)";
-        } else {
-          card[i].style.backgroundColor = "rgba(255,70,200,0.3)";
+      let timer0 = setInterval(function() {
+        span[0].textContent = number[count];
+        count++;
+        console.log(span[0].textContent);
+        if(count === number.length) {
+          count = 0;
+          loop++;
+          console.log(`${loop}번 반복`);
         }
-      }
+        if(loop === 15) {
+          span[0].textContent = 1;
 
-  });
+          clearInterval(timer0);
+        } 
+      },50);
 
-</script>
+      let timer1 = setInterval(function() {
+        span[1].textContent = number[count];
+        count++;
+        console.log(span[1].textContent);
+        if(count === number.length) {
+          count = 0;
+          loop++;
+          console.log(`${loop}번 반복`);
+        }
+        if(loop === 16) {
+          span[1].textContent = 5;
+
+          clearInterval(timer1);
+        } 
+      },50);
+
+      let timer2 = setInterval(function() {
+        span[2].textContent = number[count];
+        count++;
+        console.log(span[2].textContent);
+        if(count === number.length) {
+          count = 0;
+          loop++;
+          console.log(`${loop}번 반복`);
+        }
+        if(loop === 17) {
+          span[2].textContent = 0;
+
+          clearInterval(timer2);
+        } 
+      },50);
+
+      let timer3 = setInterval(function() {
+        span[3].textContent = number[count];
+        count++;
+        console.log(span[3].textContent);
+        if(count === number.length) {
+          count = 0;
+          loop++;
+          console.log(`${loop}번 반복`);
+        }
+        if(loop === 18) {
+          span[3].textContent = 0;
+
+          clearInterval(timer3);
+        } 
+      },50);
+
+
+
+
+
+
+
+
+
+
+        // let timer = setInterval(stop,50);
+        // function stop(a,b) {
+        //   span[a].textContent = number[count];
+        //   count++;
+        //   console.log(span[a].textContent);
+        //   if(count === number.length) {
+        //     count = 0;
+        //     loop++;
+        //     console.log(`${loop}번 반복`);
+        //   } if (loop === b) {
+        //     span[a].textContent = 1;
+        //     clearInterval(timer);
+        //   }
+        // }
+
+        // stop(0,20);
+
+
+
+
+
+    });
+
+
+
+  </script>
+</body>
 </html>
