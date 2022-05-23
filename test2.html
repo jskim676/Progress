@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <div id="root">
     <span></span>
@@ -21,10 +23,10 @@
     console.log(span);
 
     const number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    
+
     let count = 0;
     let loop = 0;
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
       // let timer = setInterval(function() {
       //   for(let i=0; i<span.length; i++) {
       //     span[i].textContent = number[count];
@@ -45,69 +47,69 @@
       //   }
       // },50);
 
-      let timer0 = setInterval(function() {
+      let timer0 = setInterval(function () {
         span[0].textContent = number[count];
         count++;
         console.log(span[0].textContent);
-        if(count === number.length) {
+        if (count === number.length) {
           count = 0;
           loop++;
           console.log(`${loop}번 반복`);
         }
-        if(loop === 15) {
+        if (loop === 15) {
           span[0].textContent = 1;
 
           clearInterval(timer0);
-        } 
-      },50);
+        }
+      }, 50);
 
-      let timer1 = setInterval(function() {
+      let timer1 = setInterval(function () {
         span[1].textContent = number[count];
         count++;
         console.log(span[1].textContent);
-        if(count === number.length) {
+        if (count === number.length) {
           count = 0;
           loop++;
           console.log(`${loop}번 반복`);
         }
-        if(loop === 16) {
+        if (loop === 16) {
           span[1].textContent = 5;
 
           clearInterval(timer1);
-        } 
-      },50);
+        }
+      }, 50);
 
-      let timer2 = setInterval(function() {
+      let timer2 = setInterval(function () {
         span[2].textContent = number[count];
         count++;
         console.log(span[2].textContent);
-        if(count === number.length) {
+        if (count === number.length) {
           count = 0;
           loop++;
           console.log(`${loop}번 반복`);
         }
-        if(loop === 17) {
+        if (loop === 17) {
           span[2].textContent = 0;
 
           clearInterval(timer2);
-        } 
-      },50);
+        }
+      }, 50);
 
-      let timer3 = setInterval(function() {
+      let timer3 = setInterval(function () {
         span[3].textContent = number[count];
         count++;
         console.log(span[3].textContent);
-        if(count === number.length) {
+        if (count === number.length) {
           count = 0;
           loop++;
           console.log(`${loop}번 반복`);
         }
-        if(loop === 18) {
+        if (loop === 18) {
           span[3].textContent = 0;
 
           clearInterval(timer3);
-        } 
-      },50);
+        }
+      }, 50);
 
 
 
@@ -118,31 +120,29 @@
 
 
 
-        // let timer = setInterval(stop,50);
-        // function stop(a,b) {
-        //   span[a].textContent = number[count];
-        //   count++;
-        //   console.log(span[a].textContent);
-        //   if(count === number.length) {
-        //     count = 0;
-        //     loop++;
-        //     console.log(`${loop}번 반복`);
-        //   } if (loop === b) {
-        //     span[a].textContent = 1;
-        //     clearInterval(timer);
-        //   }
-        // }
+      // let timer = setInterval(stop,50);
+      // function stop(a,b) {
+      //   span[a].textContent = number[count];
+      //   count++;
+      //   console.log(span[a].textContent);
+      //   if(count === number.length) {
+      //     count = 0;
+      //     loop++;
+      //     console.log(`${loop}번 반복`);
+      //   } if (loop === b) {
+      //     span[a].textContent = 1;
+      //     clearInterval(timer);
+      //   }
+      // }
 
-        // stop(0,20);
+      // stop(0,20);
 
 
 
 
 
     });
-
-
-
   </script>
 </body>
+
 </html>
