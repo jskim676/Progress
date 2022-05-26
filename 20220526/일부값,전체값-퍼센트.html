@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color: #333;
+      color:#ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1>111</h1>
+    <h1>222</h1>
+  </div>
+  <script>
+    const root = document.getElementById('root');
+    console.dir(root);
+
+    let totalHeight = root.offsetHeight;
+
+    root.addEventListener('mousemove', (event)=> {
+      let y = event.offsetY;
+      
+      function percentOne (total, value) {
+        let result = (value / total) * 100;
+        return result;
+      }
+      
+      let percent = Math.round(percentOne(totalHeight, y));
+
+      // console.log(percent);
+
+      function percentTwo (total,percent) {
+        let bgColorValue = (percent * total) / 100;
+        return bgColorValue;
+      }
+
+      let rgbValue = Math.round(percentTwo(255,percent));
+    
+      // console.log(rgbValue);
+
+      let end = `(${rgbValue},${rgbValue},${rgbValue})`;
+
+      console.log(end);
+
+      root.style.backgroundColor = `rgb${end}`;
+      console.log(root.style.backgroundColor);
+
+
+    });
+
+
+  </script>
+</body>
+</html>
