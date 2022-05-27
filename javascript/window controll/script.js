@@ -1,4 +1,3 @@
-
 // Make the DIV element draggable:
 dragElement(document.getElementById("draggable"));
 // 문서내에 id값이 draggable인 요소들의 함수 
@@ -20,6 +19,8 @@ function dragElement(elmnt) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
+    // 대상을 누르고있을때의 마우스 좌표를 pos3 pos4 변수에 대입
+    
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -42,7 +43,7 @@ function dragElement(elmnt) {
 		var content = document.getElementById("draggable");
 		var width = content.offsetWidth;
 		var height = content.offsetHeight;
-		
+    
 		pos1 = (e.clientX - width) - content.offsetLeft;
     pos2 = (e.clientY - height) - content.offsetTop;
 		

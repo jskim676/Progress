@@ -1,0 +1,11 @@
+
+
+
+.resize {
+  width:10px;
+  height:10px;
+  position: absolute;
+  bottom:0;
+  right:0;
+  border:1px solid black;
+}
