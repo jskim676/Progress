@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* //---------scroll animation-2--------- */
+    .scroll-down2{
+      width: 2vw;
+      height: 7vh;
+      border: 2px solid #00b4ff;
+      border-radius: 30px;
+      cursor: pointer;
+      position: relative;
+      margin: 0 auto;
+    }
+    .scroll-down2 > div {
+      position: absolute;
+      left: 50%;
+      top: 1.8vh;
+      width: 0.4vw;
+      height: 0.4vw;
+      border-radius: 100%;
+      background: #00b0ff;
+      animation: scrollDown2 1.5s ease infinite;
+    }
+
+
+@keyframes scrollDown2{
+    0%{
+        transform: translate(-50%, 0px);
+        opacity: 0;
+    }
+    50%{
+        transform: translate(-50%, 1vh);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%, 2vh);
+        opacity: 0;
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="css-scroll-down">
+    <div class="scroll-down2">
+      <div></div>
+    </div>
+  </div>
+</body>
+</html>

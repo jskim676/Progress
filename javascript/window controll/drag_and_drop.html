@@ -17,8 +17,8 @@
     }
 
     .area {
-      width:1200px;
-      height:800px;
+      width:100vw;
+      height:100vh;
       background-color: rgba(0,0,0,0.2);
       position:absolute;
     }
@@ -45,6 +45,8 @@
     
     
     const {width:containerWidth, height:containerHeight} = container.getBoundingClientRect();
+
+    console.log(container.getBoundingClientRect());
     
     const {width:boxWidth, height:boxHeight} = box.getBoundingClientRect();
     
@@ -71,14 +73,13 @@
       if(isDragging) {
         const diffX = e.clientX - originX;
         const diffY = e.clientY - originY;
+
         const endOfXPoint = containerWidth - boxWidth;
         const endOfYPoint = containerHeight - boxHeight;
         // 박스가 나갈수 없게 범위 지정
 
         box.style.left = `${Math.min(Math.max(0, originLeft+diffX), endOfXPoint)}px`;
         box.style.top = `${Math.min(Math.max(0, originTop+diffY), endOfYPoint)}px`;
-        console.log(originLeft);
-        console.log(originTop);
 
       }
     });

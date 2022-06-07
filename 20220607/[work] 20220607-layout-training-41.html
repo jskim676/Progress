@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width:100vw;
+      height:100vh;
+      display:flex;
+      flex-direction: column;
+    }
+
+    header {
+      width:inherit;
+      height:5vh;
+      background-color: #333;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+
+      position: relative;
+    }
+
+    #logo {
+      width:10vw;
+      height:4vh;
+      background-color: #fff;
+      margin-left: 2vw;
+    }
+
+    #menu {
+      width:50vw;
+      height:18vh;
+      background-color: #fff;
+
+      position:absolute;
+      top:1vh;
+      right:2vw;
+    }
+
+    section {
+      width:inherit;
+      height:45vh;
+      background-color: #ccc;
+    }
+
+    #buttons {
+      width:inherit;
+      height:40vh;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #prev {
+      width:200px;
+      height:200px;
+      background-color: #fff;
+    }
+
+    #next {
+      width:200px;
+      height:200px;
+      background-color: #fff;
+    }
+    
+    #circle {
+      width:inherit;
+      height:5vh;
+      border:1px solid blue;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #circle > div {
+      width:50px;
+      height:50px;
+      background-color:#fff;
+      border-radius: 50%;
+      margin:1vw 0;
+    }
+
+    main {
+      width:inherit;
+      height:45vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    main > div:nth-child(1) {
+      width:78vw;
+      height:30vh;
+      display:flex;
+      justify-content: space-between;
+      border:1px solid blue;
+    }
+
+    main > div > div {
+      width:20vw;
+      height:inherit;
+      border:1px solid red;
+    }
+
+    footer {
+      width:inherit;
+      height:5vh;
+      background-color: #333;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <header>
+      <div id="logo"></div>
+      <div id="menu"></div>
+    </header>
+    <section>
+      <div id="buttons">
+        <button id="prev"></button>
+        <button id="next"></button>
+      </div>
+      <div id="circle">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <main>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="top"></div>
+    </main>
+    <footer></footer>
+  </div>
+</body>
+</html>
