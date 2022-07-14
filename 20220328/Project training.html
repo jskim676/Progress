@@ -6,209 +6,221 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-  *{margin:0; padding:0;}
+  *{margin:0; padding:0; box-sizing: border-box;}
     :root {
       --color-1:rgb(170, 170, 170);
     }
 
-    body {
-      width:100vw;
-      height:170vh;
-      background-color:#ccc;
+    @media (max-width:767px) {
+      body {
+        width:100vw;
+        height:170vh;
+        background-color:#ccc;
+      }
 
+      #pc-header { 
+        display:none;
+      }
+
+      #pc-main {
+        display:none;
+      }
+
+      #pc-footer { 
+        display:none;
+      }
+  
+      /* 상단 */
+  
+      #mobile-header {
+        width:100vw;
+        height:20vh;
+        background-color:var(--color-1);
+        display:flex;
+        justify-content: center;
+  
+      }
+  
+      #mobile-header > div:nth-child(1) {
+        width:50vw;
+        height:20vh;
+        display:flex;
+        justify-content: center;
+        align-items:flex-start;
+        flex-direction:column;
+      }
+      
+      #mobile-header > div:nth-child(1) > div:nth-child(1){
+        font-size: 13px;
+        margin-top:1vh;
+      }
+  
+      #mobile-header > div:nth-child(1) > div:nth-child(2){
+        font-size: 26px;
+        margin-top:1vh;
+      }
+  
+  
+      #mobile-header > div:nth-child(2) {
+        width:30vw;
+        height:20vh;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+  
+      #mobile-header > div:nth-child(2) > div {
+        width:15vw;
+        height:15vw;
+        border-radius: 50%;
+        background-color: #ccc;
+      }
+  
+      /* 중단 */
+  
+      #mobile-main {
+        width:100vw;
+        height:140vh;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+  
+      }
+  
+      #mobile-main > div:nth-child(1) {
+        width:90vw;
+        height:60vh;
+        margin-top:5vh;
+        margin-bottom:5vh;
+      }
+  
+      #mobile-main > div:nth-child(1) > div:nth-child(1) {
+        width: 25vw;
+        height:5vh;
+        background-color:var(--color-1);
+        margin-bottom:5vh;
+      }
+      
+      #mobile-main > div:nth-child(1) > div:nth-child(2) {
+        width:90vw;
+        height:50vh;
+      }
+  
+      #mobile-main > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+        width:90vw;
+        height: 35vh;
+        background-color:var(--color-1);
+      }
+  
+      #mobile-main > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+        width:90vw;
+        height: 10vh;
+        background-color:var(--color-1);
+        margin-top:5vh;
+      }
+  
+      #mobile-main > div:nth-child(2) {
+        width: 90vw;
+        height:80vh;
+        margin-top:5vh;
+        margin-bottom:5vh;
+      }
+  
+      #mobile-main > div:nth-child(2) > div:nth-child(1) {
+        width: 25vw;
+        height:5vh;
+        background-color:var(--color-1);
+        margin-bottom:5vh;
+      }
+  
+      #mobile-main > div:nth-child(2) > div:nth-child(2) {
+        width:90vw;
+        height:60vh;
+      }
+  
+      #mobile-main > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+        width:90vw;
+        height:25vh;
+        display:flex;
+        justify-content: space-between;
+      }
+  
+      #mobile-main > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div {
+        width: 25vw;
+        height:25vw;
+        background-color:var(--color-1);
+      }
+  
+      #mobile-main > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+        width:90vw;
+        height:25vh;
+        display:flex;
+        justify-content: space-between;
+      }
+  
+      #mobile-main > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div {
+        width: 25vw;
+        height:25vw;
+        background-color:var(--color-1);
+      }
+  
+      /* 하단 */
+  
+      #mobile-footer { 
+        width:100vw;
+        height:10vh;
+        background-color:var(--color-1);
+        display:flex;
+        justify-content: center;
+      }
+  
+      #mobile-footer > div {
+        width:90vw;
+        height:10vh;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      #mobile-footer > div >div {
+        width:12vw;
+        height:12vw;
+        border-radius: 50%;
+        background-color: #ccc;
+      }
     }
 
-    /* 상단 */
-
-    header {
-      width:100vw;
-      height:20vh;
-      background-color:var(--color-1);
-      display:flex;
-      justify-content: center;
-
-    }
-
-    header > div:nth-child(1) {
-      width:50vw;
-      height:20vh;
-      display:flex;
-      justify-content: center;
-      align-items:flex-start;
-      flex-direction:column;
-    }
-    
-    header > div:nth-child(1) > div:nth-child(1){
-      font-size: 13px;
-      margin-top:1vh;
-    }
-
-    header > div:nth-child(1) > div:nth-child(2){
-      font-size: 26px;
-      margin-top:1vh;
-    }
 
 
-    header > div:nth-child(2) {
-      width:30vw;
-      height:20vh;
-      display:flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    header > div:nth-child(2) > div {
-      width:15vw;
-      height:15vw;
-      border-radius: 50%;
-      background-color: #ccc;
-    }
-
-    /* 중단 */
-
-    main {
-      width:100vw;
-      height:140vh;
-      display:flex;
-      align-items: center;
-      flex-direction: column;
-
-    }
-
-    main > div:nth-child(1) {
-      width:90vw;
-      height:60vh;
-      margin-top:5vh;
-      margin-bottom:5vh;
-    }
-
-    main > div:nth-child(1) > div:nth-child(1) {
-      width: 25vw;
-      height:5vh;
-      background-color:var(--color-1);
-      margin-bottom:5vh;
-    }
-    
-    main > div:nth-child(1) > div:nth-child(2) {
-      width:90vw;
-      height:50vh;
-    }
-
-    main > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
-      width:90vw;
-      height: 35vh;
-      background-color:var(--color-1);
-    }
-
-    main > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
-      width:90vw;
-      height: 10vh;
-      background-color:var(--color-1);
-      margin-top:5vh;
-    }
-
-    main > div:nth-child(2) {
-      width: 90vw;
-      height:80vh;
-      margin-top:5vh;
-      margin-bottom:5vh;
-    }
-
-    main > div:nth-child(2) > div:nth-child(1) {
-      width: 25vw;
-      height:5vh;
-      background-color:var(--color-1);
-      margin-bottom:5vh;
-    }
-
-    main > div:nth-child(2) > div:nth-child(2) {
-      width:90vw;
-      height:60vh;
-    }
-
-    main > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
-      width:90vw;
-      height:25vh;
-      display:flex;
-      justify-content: space-between;
-    }
-
-    main > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div {
-      width: 40vw;
-      height:40vw;
-      background-color:var(--color-1);
-    }
-
-    main > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
-      width:90vw;
-      height:25vh;
-      display:flex;
-      justify-content: space-between;
-    }
-
-    main > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div {
-      width: 40vw;
-      height:40vw;
-      background-color:var(--color-1);
-    }
-
-    /* 하단 */
-
-    footer { 
-      width:100vw;
-      height:10vh;
-      background-color:var(--color-1);
-      display:flex;
-      justify-content: center;
-    }
-
-    footer > div {
-      width:90vw;
-      height:10vh;
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    footer > div >div {
-      width:15vw;
-      height:15vw;
-      border-radius: 50%;
-      background-color: #ccc;
-    }
-
-
-
-    @media (min-width:1028px) {
+    @media (min-width:768px) {
       body {
         width:100vw;
         height:100vh;
-
+        background-color: #ccc;
       }
- 
-      header { 
+
+      #mobile-header { 
         display:none;
       }
 
-      main {
+      #mobile-main {
         display:none;
       }
 
-      footer { 
+      #mobile-footer { 
         display:none;
       }
       
-      #header {
+      #pc-header {
         width:100vw;
         height:10vh;
         display:flex;
         justify-content: center;
         align-items: center;
-
-
+        background-color:var(--color-1);
       }
 
-      #header > div {
+      #pc-header > div {
         width:70vw;
         height:10vh;
         display:flex;
@@ -216,72 +228,67 @@
         align-items: center;
       }
       
-      #header > div > div:nth-child(1) {
+      #pc-header > div > div:nth-child(1) {
         width:10vw;
         height:5vh;
         border-radius:1vw;
         background-color: rgb(235, 235, 235);
       }
 
-      #header > div > div:nth-child(2) {
+      #pc-header > div > div:nth-child(2) {
         width:10vw;
         height:5vh;
         border-radius:1vw;
         background-color: rgb(235, 235, 235);
       }
 
-      #header > div > div:nth-child(3){
+      #pc-header > div > div:nth-child(3){
         width:5vw;
         height:5vw;
         border-radius: 50%;
         background-color: rgb(235, 235, 235);
       }
 
-      #header > div > div:nth-child(4) {
+      #pc-header > div > div:nth-child(4) {
         width:10vw;
         height:5vh;
         border-radius:1vw;
         background-color: rgb(235, 235, 235);
       }
 
-      #header > div > div:nth-child(5) {
+      #pc-header > div > div:nth-child(5) {
         width:10vw;
         height:5vh;
         border-radius:1vw;
         background-color: rgb(235, 235, 235);
       }
       
-      #main {
+      #pc-main {
         width:100vw;
         height:82vh;
         display:flex;
-
       }
 
-      #main > div {
-        /* border:1px solid black; */
-      }
-
-      #main > div:nth-child(1) {
+      #pc-main > div:nth-child(1) {
         width:20vw;
         height:82vh;
         display:flex;
         align-items: center;
       }
       
-      #main > div:nth-child(1) > div{
+      #pc-main > div:nth-child(1) > div{
         width:18vw;
         height:75vh;
         background-color: rgb(177, 177, 177);
         border-radius: 0 1vw 1vw 0 ;
       }
 
-      #main > div:nth-child(2) { 
+      #pc-main > div:nth-child(2) { 
         width:50vw;
         height:82vh;
       }
 
-      #main > div:nth-child(3) { 
+      #pc-main > div:nth-child(3) { 
         width:30vw;
         height:82vh;
         display:flex;
@@ -289,17 +296,17 @@
         align-items:flex-end;
       }
 
-      #main > div:nth-child(3) > div { 
+      #pc-main > div:nth-child(3) > div { 
         width:24vw;
         height:70vh;
         background-color:rgb(189, 189, 189);
       }
 
-      #main > div:nth-child(3) > div >div{ 
+      #pc-main > div:nth-child(3) > div >div{ 
           width:24vw;
       }
 
-      #footer {
+      #pc-footer {
         width:100vw;
         height:8vh;
         background-color: rgb(177, 177, 177);
@@ -307,10 +314,10 @@
         display:flex;
         justify-content:center;
         align-items: center;
-
+        position:absolute;
       }
 
-      #footer > div {
+      #pc-footer > div {
         width:97vw;
         height:9vh;
         display:flex;
@@ -318,7 +325,7 @@
         align-items: center;
       }
 
-      #footer > div > div {
+      #pc-footer > div > div {
         width:3vw;
         height:3vw;
         border-radius: 50%;
@@ -331,69 +338,73 @@
   </style>
 </head>
 <body>
-  <header>
-    <div>
-      <div>현재 위치 : 대전</div>
-      <div>나의 여행</div>
+  <div id="mobile">
+    <div id="mobile-header">
+      <div>
+        <div>현재 위치 : 대전</div>
+        <div>나의 여행</div>
+      </div>
+      <div>
+        <div></div>
+      </div>
     </div>
-    <div>
-      <div></div>
+    <div id="mobile-main">
+      <div>
+        <div></div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div>
+        <div></div>
+        <div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
-  <main>
-    <div>
-      <div></div>
+    <div id="mobile-footer">
       <div>
         <div></div>
         <div></div>
-      </div>
-    </div>
-    <div>
-      <div></div>
-      <div>
-        <div>
-          <div></div>
-          <div></div>
-        </div>
-        <div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </footer>
-  <div id="header">
-    <div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <div id="main">
-    <div>
-      <div></div>
-    </div>
-    <div></div>
-    <div>
-      <div>
-        <div>
-          Chat
-        </div>
+        <div></div>
       </div>
     </div>
   </div>
-  <div id="footer">
-    <div>
+  <div id="pc">
+    <div id="pc-header">
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="pc-main">
+      <div>
+        <div></div>
+      </div>
       <div></div>
+      <div>
+        <div>
+          <div>
+            Chat
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="pc-footer">
+      <div>
+        <div></div>
+      </div>
     </div>
   </div>
 
