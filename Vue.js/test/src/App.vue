@@ -1,45 +1,17 @@
 <template>
-  <div class="black-bg" v-if="모달창 == true">
-    <div class="white-bg">
-      <h4>상세페이지임</h4>
-      <p>상세페이지 내용임</p>
-      <button @click="모달창 = false">닫기</button>
-    </div>
-  </div>
-
-
 
   <div class="menu">
     <a v-for="a in menu" :key="a">{{a}}</a>
   </div>
 
-
   <div>
     <img src="./assets/room0.jpg" alt="" class="room-img">
-    <h4 @click="모달창 = true">{{원룸들[0].title}}</h4>
+    <h4>{{원룸들[0].title}}</h4>
     <p>{{원룸들[0].price}}</p>
-    <!-- <button @click="신고수[0]++">허위매물신고</button>
-    <span>신고수 : {{신고수[0]}}</span> -->
-  </div>
-  <div>
-    <img src="./assets/room1.jpg" alt="" class="room-img">
-    <h4 @click="모달창 = true"></h4>
-    <p>60만원</p>
-    <!-- <button @click="신고수[1]++">허위매물신고</button>
-    <span>신고수 : {{신고수[1]}}</span> -->
-  </div>
-  <div>
-    <img src="./assets/room2.jpg" alt="" class="room-img">
-    <h4 @click="모달창 = true"></h4>
-    <p>70만원</p>
-    <!-- <button @click="신고수[2]++">허위매물신고</button>
-    <span>신고수 : {{신고수[2]}}</span> -->
   </div>
 
-  <!-- <div v-for="(b,i) in products" :key="i">
-    <h4>{{b}}</h4>
-    <p></p>
-  </div> -->
+
+
 </template>
 
 
